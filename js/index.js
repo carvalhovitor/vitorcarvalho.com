@@ -55,11 +55,11 @@ function loadResponsiveMenu(){
 
     if (windowSize == 'large') {
         
-        $('.main-menu').css('height','auto');
+        $('#main-menu').css('height','auto');
         
     } else if (windowSize == 'small') {
         
-        $('.main-menu').css('height','0px');
+        $('#main-menu').css('height','0px');
         $('a.mobile-menu').removeClass('selected');  
         
     };
@@ -70,18 +70,18 @@ function mobileMenu(){
 
     $('a.mobile-menu').on('click', function (){
 
-       var navHeight = $('.main-menu').height();
-       var newNavHeight = $('.main-menu div').height();
+       var navHeight = $('#main-menu').height();
+       var newNavHeight = $('#main-menu div').height();
 
         if(navHeight == 0){
             
-           $('.main-menu').animate({'height':newNavHeight+'px'}, 500);
+           $('#main-menu').animate({'height':newNavHeight+'px'}, 500);
            $(this).addClass('selected');
            $('body').addClass('lock');
             
         }else{
             
-           $('.main-menu').animate({'height':'0px'}, 500);
+           $('#main-menu').animate({'height':'0px'}, 500);
            $(this).removeClass('selected');
            $('body').removeClass('lock');
             
@@ -91,7 +91,7 @@ function mobileMenu(){
 
             if(windowSize == 'small') {
                 
-                $('.main-menu').animate({'height':'0px'}, 500);
+                $('#main-menu').animate({'height':'0px'}, 500);
                 $('body').removeClass('lock');
                 $('a.mobile-menu').removeClass('selected');
                 
@@ -193,7 +193,7 @@ function loadContent(href){
 
 $(document).ready(function(){
     
-    scrollSlowly()
+    scrollSlowly();
     mobileMenu();
     checkBrowserSize();
     setInterval('checkBrowserSize()', 100);
