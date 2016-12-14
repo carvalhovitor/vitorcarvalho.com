@@ -56,38 +56,28 @@ body {
     margin: 0 30px 30px 30px;
 }
 
-.lock {
-    overflow: hidden;
-}
-
-h1, li:first-child a,
-li:last-child a {
+h1, li:first-child a, li:last-child a {
     font-weight: bold;
 }
 
-li:first-child a,
-li:last-child a,
-li a:hover,
-p a {
+li:first-child a, li:last-child a, li a:hover, p a {
     border-bottom: 1px solid #000;
 }
 
-li:first-child a:hover,
-li:last-child a:hover,
-p a:hover {
+li:first-child a:hover, li:last-child a:hover, p a:hover {
     border-bottom: none;
 }
 
 h2 {
-    font-size: 68px;
-    margin: 0 0 25px -4px;
+    font-size: 5.5em;
+    margin: 0 0 3px -4px;
     padding-top: 29px;
     letter-spacing: -.02em;
     display: block;
 }
 
 h3 {
-    margin-bottom: 1rem;
+    margin-bottom: 1.2em;
 }
 
 .em-dash {
@@ -103,11 +93,7 @@ p + p {
 
 header {
     position: fixed;
-    top: 62px;
-}
-
-aside {
-    top: 94px;
+    top: 60px;
 }
 
 aside ul {
@@ -116,16 +102,12 @@ aside ul {
     text-indent: -1em;
 }
 
-aside > div {
-    margin-bottom: 48px
-}
-
-    
-ul li:last-child {
+ul li:last-child, .visit {
     margin-top: 1.2em;
 }
 
-nav {
+#main-menu {
+    margin-top: 2rem;
     height: auto;
     overflow: hidden;
 }
@@ -139,7 +121,7 @@ nav {
     bottom: 30px;
 }
 
-.language-change .strike, .language-change a:hover {
+.strike, .language-change a:hover {
     text-decoration: line-through;
 }
 
@@ -154,10 +136,6 @@ main {
     max-width: 1024px;
     margin-left: 253px;
 }
-
-/*.images-pt {
-    margin-left: 256px;
-}*/
 
 img {
     width: 100%;
@@ -181,16 +159,14 @@ img {
 
 hr {
     position: relative;
-    z-index: -9;
     height: 60px;
-    opacity: 0;
+    border: 0;
 }
 
 hr:first-of-type {
     position: absolute;
     top: 0;
-    z-index: -9;
-    height: 0px !important;
+    height: 0 !important;
 }
 
 .specifications {
@@ -201,6 +177,9 @@ hr:first-of-type {
     text-indent: 0;
 }
 
+.visit {
+    display: block;
+}
 
 /* ABOUT */
 
@@ -264,12 +243,8 @@ hr:first-of-type {
     }
     
     #main-menu {
-        height: 0px;
+        height: 0;
         margin-top: 67px;
-    }
-
-    aside ul br {
-        display: none;
     }
     
     aside ul li {
@@ -281,11 +256,11 @@ hr:first-of-type {
         border-top: 1px solid #000;
     }
     
-    aside ul li:first-child, li:last-child, li:nth-last-child(2) {
+    aside ul li:first-child, li:last-child {
         display: none;
     }
     
-    aside ul li:nth-last-child(3) {
+    aside ul li:nth-last-child(2) {
         border-bottom: 1px solid black;
     }
     
@@ -293,7 +268,7 @@ hr:first-of-type {
         position: fixed;
         top: 0;
         left: 0;
-        padding: 30px 0px 0px;
+        padding: 30px 0 0;
         height: 36px;
         width: 100%;
         background: white;
