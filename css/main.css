@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    border: 0;
     font-size: 1em;
     color: black;
     font-weight: normal;
@@ -70,10 +71,9 @@ li:first-child a:hover, li:last-child a:hover, p a:hover {
 
 h2 {
     font-size: 5.5em;
-    margin: 0 0 3px -4px;
-    padding-top: 29px;
+    margin: 0 0 7px -4px;
+    padding-top: 25px;
     letter-spacing: -.02em;
-    display: block;
 }
 
 h3 {
@@ -81,7 +81,7 @@ h3 {
 }
 
 .em-dash {
-    letter-spacing: -0.3em;
+    letter-spacing: -.3em;
 }
 
 p + p {
@@ -93,6 +93,7 @@ p + p {
 
 header {
     position: fixed;
+    width: 120px;
     top: 60px;
 }
 
@@ -160,7 +161,6 @@ img {
 hr {
     position: relative;
     height: 60px;
-    border: 0;
 }
 
 hr:first-of-type {
@@ -184,7 +184,7 @@ hr:first-of-type {
 /* ABOUT */
 
 .about p {
-    max-width: 600px;
+    max-width: 550px;
     font-size: 1.7em;
 }
 
@@ -224,7 +224,7 @@ hr:first-of-type {
     h1, .language-change {
         position: fixed;
         top: 22px;
-        z-index: 1;
+        z-index: 2;
     }
     
     .language-change {
@@ -254,6 +254,10 @@ hr:first-of-type {
         text-indent: 12px;
         margin-left: -13px;
         border-top: 1px solid #000;
+    }
+    
+    aside ul li a {
+        white-space: 
     }
     
     aside ul li:first-child, li:last-child {
