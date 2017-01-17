@@ -1,0 +1,34 @@
+---
+---
+
+<hr id="{{ page.id | remove: '/projects/'}}">
+
+<article>
+
+    <div class="project-description">
+
+        <h3 class="title">{{ page.title }}</h3>
+        
+        {{ content }}
+
+    </div>
+
+    <div class="images">
+      
+        {% for image in site.static_files %}
+
+            {% capture images-path %}{{ page.id | remove: "/projects/" | prepend: "/images/"}}{% endcapture %}
+            
+            {% if image.path contains images-path %}
+            
+            <div class="img-wrapper">
+                <img src="{{ site.url }}/images/placeholder.gif" data-src="{{ site.url }}{{ image.path }}">
+            </div>
+            
+            {% endif %}
+            
+        {% endfor %}
+
+    </div>
+    
+</article>

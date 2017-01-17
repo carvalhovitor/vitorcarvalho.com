@@ -23,8 +23,8 @@
     url(fonts/HelveticaNeueLTStd-Bd.woff) format('woff'),
     url(fonts/HelveticaNeueLTStd-Bd.ttf) format('truetype'),
     url(fonts/HelveticaNeueLTStd-Bd.svg#HelveticaNeueLTStd-Bd) format('svg');
-    font-weight:bold;
-    font-style:normal
+    font-weight: bold;
+    font-style: normal
 }
 
 @font-face{font-family: Helvetica Neue;
@@ -34,8 +34,8 @@
     url(fonts/HelveticaNeueLTStd-Roman.woff) format('woff'),
     url(fonts/HelveticaNeueLTStd-Roman.ttf) format('truetype'),
     url(fonts/HelveticaNeueLTStd-Roman.svg#HelveticaNeueLTStd-Roman) format('svg');
-    font-weight:normal;
-    font-style:normal
+    font-weight: normal;
+    font-style: normal
 }
 
 @font-face{font-family: Helvetica Neue;
@@ -45,8 +45,8 @@
     url(fonts/HelveticaNeueLTStd-It.woff) format('woff'),
     url(fonts/HelveticaNeueLTStd-It.ttf) format('truetype'),
     url(fonts/HelveticaNeueLTStd-It.svg#HelveticaNeueLTStd-It) format('svg');
-    font-weight:normal;
-    font-style:italic
+    font-weight: normal;
+    font-style: italic
 }
 
 
@@ -57,7 +57,7 @@ body {
     margin: 0 30px 30px 30px;
 }
 
-h1, li:first-child a, li:last-child a {
+header > a *, li:first-child a, li:last-child a {
     font-weight: bold;
 }
 
@@ -88,6 +88,10 @@ p + p {
     text-indent: 2em;
 }
 
+i {
+    font-style: italic;
+}
+
 
 /* SIDEBAR */
 
@@ -95,6 +99,7 @@ header {
     position: fixed;
     width: 120px;
     top: 60px;
+    z-index: 1;
 }
 
 aside ul {
@@ -113,7 +118,7 @@ ul li:last-child, .visit {
     overflow: hidden;
 }
 
-.mobile-menu {
+.open-menu {
     display: none;
 }
 
@@ -135,7 +140,7 @@ main {
 
 .images {
     max-width: 1024px;
-    margin-left: 253px;
+    margin-left: 254px;
 }
 
 img {
@@ -166,22 +171,19 @@ hr {
 hr:first-of-type {
     position: absolute;
     top: 0;
-    height: 0 !important;
+    height: 0;
 }
 
 .specifications {
     margin: 1rem 0;
 }
 
-.specifications, .features {
+.specifications, .features, .visit {
     text-indent: 0;
 }
 
-.visit {
-    display: block;
-}
-
 /* ABOUT */
+
 
 .about p {
     max-width: 550px;
@@ -223,14 +225,13 @@ hr:first-of-type {
     
     h1, .language-change {
         position: fixed;
-        top: 22px;
+        top: 20px;
         z-index: 2;
     }
     
     .language-change {
         bottom: auto;
-        right: 52px;
-        height: auto;
+        right: 50px;
     }
     
     aside {
@@ -244,7 +245,7 @@ hr:first-of-type {
     
     #main-menu {
         height: 0;
-        margin-top: 67px;
+        margin-top: 62px;
     }
     
     aside ul li {
@@ -254,10 +255,6 @@ hr:first-of-type {
         text-indent: 12px;
         margin-left: -13px;
         border-top: 1px solid #000;
-    }
-    
-    aside ul li a {
-        white-space: 
     }
     
     aside ul li:first-child, li:last-child {
@@ -270,12 +267,8 @@ hr:first-of-type {
     
     aside > div {
         position: fixed;
-        top: 0;
-        left: 0;
-        padding: 30px 0 0;
-        height: 36px;
+        height: 62px;
         width: 100%;
-        background: white;
     }
     
     li a:hover {
@@ -310,21 +303,19 @@ hr:first-of-type {
     
     .images {
         position: relative;
-        z-index: -1;
     }
     
     .about {
         margin: 10px;
     }
     
-    a.mobile-menu {
+    a.open-menu {
         display: block;
         width: 44px;
         height: 44px;
-        float: right;
-        position: relative;
+        position: absolute;
+        top: 12px;
         right: 4px;
-        bottom: 16px;
         cursor: pointer;
         -ms-transform: rotate(180deg);
         -webkit-transform: rotate(180deg);
@@ -332,7 +323,7 @@ hr:first-of-type {
         transition: .5s;
     }
     
-    a.mobile-menu.selected {
+    a.open-menu.selected {
         -ms-transform: rotate(0deg);
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
