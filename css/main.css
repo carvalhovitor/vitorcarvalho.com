@@ -57,15 +57,15 @@ body {
     margin: 0 30px 30px 30px;
 }
 
-header > a *, li:first-child a, li:last-child a {
+header > a *, div > ul > li > a {
     font-weight: bold;
 }
 
-li:first-child a, li:last-child a, li a:hover, p a {
+li a:hover, div > ul > li > a, p a {
     border-bottom: 1px solid #000;
 }
 
-li:first-child a:hover, li:last-child a:hover, p a:hover {
+p a:hover, div > ul > li > a:hover {
     border-bottom: none;
 }
 
@@ -102,13 +102,13 @@ header {
     z-index: 1;
 }
 
-aside ul {
+li > ul {
     list-style: none;
     margin-left: 1em;
     text-indent: -1em;
 }
 
-ul li:last-child, .visit {
+div > ul > li:last-child, .visit {
     margin-top: 1.2em;
 }
 
@@ -162,7 +162,7 @@ img {
     float: left;
     width: 230px;
 }
-
+/*
 hr {
     position: relative;
     height: 60px;
@@ -172,7 +172,13 @@ hr:first-of-type {
     position: absolute;
     top: 0;
     height: 0;
+}*/
+
+.projects > div:not(:first-of-type) {
+    padding-top: 60px;
 }
+
+
 
 .specifications {
     margin: 1rem 0;
