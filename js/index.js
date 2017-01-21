@@ -120,31 +120,31 @@ $(function() {
     
     // Slow scrolling
     
-    $('a[href*=#]:not([href=#])').on('click', function(){
+    $('a[href^=#]').on('click', function(){
         
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
             
             var $linkElem = $(this),
                 target = $(this.hash);
             
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            target = target.length ? target : $('body');
             
             if (target.length) {
                 
-                $('html, body').animate({ scrollTop: target.offset().top }, 1000, function() {
+                $('body').animate({ scrollTop: target.offset().top }, 1000, function() {
                     
                     window.location.hash = $linkElem.attr('href')
                     
                 })
                 
-            return false
                 
             }
             
         }
         
+        return false
+        
     })
-    
 
     
-});
+})
