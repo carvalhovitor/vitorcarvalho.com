@@ -51,7 +51,11 @@ function loadResponsiveMenu() {
     
 }
 
-Math.seedrandom((new Date).getDate());
+var date = new Date(),
+    day = String(date.getDate()),
+    month = String(date.getMonth());
+
+Math.seedrandom(day + month);
 
 var list = document.getElementById('project-list'),
     projects = document.getElementById('projects');
@@ -66,7 +70,6 @@ for (var i = list.children.length; i >= 0; i--) {
 }
 
 $(function() {
-
     
     setInterval('checkBrowserSize()', 100);
     

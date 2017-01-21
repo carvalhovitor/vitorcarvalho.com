@@ -74,6 +74,7 @@ h2 {
     margin: 0 0 7px -4px;
     padding-top: 25px;
     letter-spacing: -.02em;
+    position: absolute;
 }
 
 h3 {
@@ -175,9 +176,12 @@ hr:first-of-type {
 }*/
 
 .projects > div:not(:first-of-type) {
-    padding-top: 60px;
+    padding-top: 3.75rem;
 }
 
+.projects > div:first-of-type {
+    padding-top: 7.75rem;
+}
 
 
 .specifications {
@@ -203,7 +207,7 @@ hr:first-of-type {
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 1024px) {
     
     .project-description {
         float: none;
@@ -226,12 +230,12 @@ hr:first-of-type {
     /* NAVIGATION */
     
     header {
-        margin-left: 12px;
+        margin-left: .75rem;
     }
     
-    h1, .language-change {
+    header > a, .language-change {
         position: fixed;
-        top: 20px;
+        top: 1rem;
         z-index: 2;
     }
     
@@ -251,77 +255,66 @@ hr:first-of-type {
     
     #main-menu {
         height: 0;
-        margin-top: 62px;
+        margin-top: 3.5rem;
     }
     
-    aside ul li {
-        height: 16px;
-        padding-top: 14px;
-        padding-bottom: 7px;
-        text-indent: 12px;
-        margin-left: -13px;
-        border-top: 1px solid #000;
-    }
-    
-    aside ul li:first-child, li:last-child {
+    #main-menu div > ul > li:first-child,
+    #main-menu div > ul > li:last-child{
         display: none;
     }
     
-    aside ul li:nth-last-child(2) {
+    
+    #project-list li {
+        display: block;
+        height: 20px;
+        text-indent: .75rem;
+        margin-left: -.75rem;
+        padding: 12px 0 3px;
         border-bottom: 1px solid black;
+    }
+    
+    #project-list li:first-child {
+        border-top: 1px solid black;
     }
     
     aside > div {
         position: fixed;
-        height: 62px;
+        height: 3.5rem;
         width: 100%;
     }
     
     li a:hover {
         border-bottom: none;
     }
-
-    
-    
-    /* CONTENT */
     
     main {
-        margin: 66px 0 0;
+        margin: 4.125rem 0 0;
     }
     
     h2 {
         font-size: 4em;
-        margin: 10px;
-        padding-top: 60px;
-        line-height: .9em;
-        margin-bottom: -60px;
+        margin: .625rem;
+        position: static;
     }
     
-    hr:first-of-type {
-        position: relative;
-        z-index: -9;
-        height: 60px !important;
+    .projects > div:first-of-type {
+        padding-top: 3.75rem;
     }
 
     .project-description {
-        margin: 20px 12px 22px;
+       /* border-top: 1px solid black;
+        padding-top: 1.2rem;*/
+        margin: 0 .75rem 1rem;
     }
     
-    .images {
-        position: relative;
-    }
-    
-    .about {
-        margin: 10px;
-    }
     
     a.open-menu {
         display: block;
-        width: 44px;
-        height: 44px;
+        width: 2.75rem;
+        height: 2.75rem;
         position: absolute;
-        top: 12px;
-        right: 4px;
+        top: .625rem;
+        right: .25rem;
         cursor: pointer;
         -ms-transform: rotate(180deg);
         -webkit-transform: rotate(180deg);
