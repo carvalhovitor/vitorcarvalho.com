@@ -1,4 +1,0 @@
-User-Agent: *
-Disallow: 
-Disallow: /files/vitor_cv.pdf
-Disallow: /about.htm

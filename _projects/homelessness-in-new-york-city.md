@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Homelessness in New York City
+lang: 
 ---
 
 A series of posters designed after sorting New York City&rsquo;s facts and myths on homelessness. A set of four posters were screenprinted on top of The New York Times&rsquo; real estate section and then hung/discarded on the streets.

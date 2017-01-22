@@ -17,7 +17,6 @@ title: Vitor Carvalho
 email: vitor@vitorcarvalho.net
 description: > # this means to ignore newlines until "baseurl:"
   Vitor Carvalho is a Graphic Designer from Brazil.
-baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://vitorcarvalho.net" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: carvalhovitor
 
@@ -26,3 +25,23 @@ markdown: kramdown
 collections:
  projects:
   output: true
+  
+gems:
+  - jekyll-polyglot
+  
+languages: ["en", "pt"]
+default_lang: "en"
+exclude_from_localization: ["js", "css", "files", "javali.htm", "README.md", "Gemfile", "Gemfile.lock"]
+parallel_localization: true
+
+section-title:
+  en: Projects
+  pt: Projetos
+  
+role:
+  en: Graphic Design
+  pt: Design Gráfico
+  
+about:
+  en: About & Contact
+  pt: Sobre & Contato
