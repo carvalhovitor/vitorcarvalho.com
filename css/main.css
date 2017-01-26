@@ -55,6 +55,7 @@
 body {
     font: 13px/1.3 "Helvetica Neue", Helvetica, Arial, sans-serif; 
     margin: 0 30px 30px 30px;
+    display: none;
 }
 
 header > a *, div > ul > li > a {
@@ -163,26 +164,14 @@ img {
     float: left;
     width: 230px;
 }
-/*
-hr {
-    position: relative;
-    height: 60px;
-}
-
-hr:first-of-type {
-    position: absolute;
-    top: 0;
-    height: 0;
-}*/
 
 .projects > div:not(:first-of-type) {
     padding-top: 3.75rem;
 }
 
-.projects > div:first-of-type {
+.projects > div:first-of-type, .about article {
     padding-top: 7.75rem;
 }
-
 
 .specifications {
     margin: 1rem 0;
@@ -192,8 +181,8 @@ hr:first-of-type {
     text-indent: 0;
 }
 
-/* ABOUT */
 
+/* ABOUT */
 
 .about p {
     max-width: 550px;
@@ -263,7 +252,6 @@ hr:first-of-type {
         display: none;
     }
     
-    
     #project-list li {
         display: block;
         height: 20px;
@@ -292,21 +280,23 @@ hr:first-of-type {
     }
     
     h2 {
-        font-size: 4em;
-        margin: .625rem;
+        font-size: 3em;
+        line-height: .9em;
+        margin: 2em .625rem .625em;
+        padding: 0;
         position: static;
     }
     
     .projects > div:first-of-type {
         padding-top: 3.75rem;
+        margin-top: -3.75rem;
     }
 
-    .project-description {
+    .project-description, .about article {
        /* border-top: 1px solid black;
         padding-top: 1.2rem;*/
         margin: 0 .75rem 1rem;
     }
-    
     
     a.open-menu {
         display: block;
@@ -326,6 +316,14 @@ hr:first-of-type {
         -ms-transform: rotate(0deg);
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
+    }
+    
+    .about article {
+        padding: 0;
+    }
+    
+    .about p {
+        font-size: 1.5em;
     }
     
 }

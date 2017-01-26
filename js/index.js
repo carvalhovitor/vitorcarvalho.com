@@ -26,20 +26,28 @@ function checkBrowserSize(){
         loadResponsiveMenu();
         
     }
-
 }
 
 function loadResponsiveMenu() {
-
+    
+    var $subheader = $('#home > a');
+    
+    document.location.pathname.indexOf("/pt/") == 0 ? (about = 'Sobre &amp; Contato', gd = 'Design Gráfico') : (about = 'About &amp; Contact', gd = 'Graphic Design');
+    
+    var hash = '#';
+    var location = document.location.pathname == '/about.htm' ? hash.prepend('/') : hash;
+    
     if (windowSize == 'large' || windowSize == 'medium') {
         
         $mainMenu.css('height', 'auto');
         $('.project-description').stick_in_parent({ offset_top: 60 });
+        $subheader.attr('href', location).find('p').html(gd);
         
     } else if (windowSize == 'small') {
         
         $mainMenu.css('height', 0);
         $('.open-menu').removeClass('selected');
+        $subheader.attr('href', 'about.htm').find('p').html(about);
         
     }
     
@@ -49,23 +57,50 @@ function loadResponsiveMenu() {
         
     }
     
+/*    if (windowSize == 'small' && window.location.pathname == "/about.htm") {
+        
+        $('main').load('index.htm' + ' section', function() {
+            
+            // Change later to function
+            $('img').unveil(800, function(){
+                $(this).load(function() {
+                    this.style.opacity = 1;
+                })
+            })
+            
+        })
+        
+        console.log('running');
+        
+    } else {
+        
+        
+        
+    }*/
+    
 }
 
-var date = new Date(),
-    day = String(date.getDate()),
-    month = String(date.getMonth());
+function randomize() {
 
-Math.seedrandom(day + month);
+    var date = new Date(),
+        day = String(date.getDate()),
+        month = String(date.getMonth());
 
-var list = document.getElementById('project-list'),
-    projects = document.getElementById('projects');
+    Math.seedrandom(day + month);
 
-for (var i = list.children.length; i >= 0; i--) {
+    var list = document.getElementById('project-list'),
+        projects = document.getElementById('projects');
 
-    var random = Math.random() * i | 0;
+    for (var i = list.children.length; i >= 0; i--) {
 
-    list.appendChild(list.children[random]);
-    projects.appendChild(projects.children[random]);
+        var random = Math.random() * i | 0;
+
+        list.appendChild(list.children[random]);
+        if (projects) { projects.appendChild(projects.children[random]) }
+
+    }
+    
+    $('body').show();
     
 }
 
@@ -106,17 +141,7 @@ $(function() {
 
     })
     
-    // Unveils images
-    
-    $('img').unveil(800, function(){
-        
-        $(this).load(function() {
-            
-            this.style.opacity = 1;
-            
-        })
-        
-    })
+
     
     // Slow scrolling
     
@@ -140,9 +165,23 @@ $(function() {
                 
             }
             
+        return false
+            
         }
         
-        return false
+    })
+    
+    randomize();
+    
+        // Unveils images
+    
+    $('img').unveil(800, function(){
+        
+        $(this).load(function() {
+            
+            this.style.opacity = 1;
+            
+        })
         
     })
 

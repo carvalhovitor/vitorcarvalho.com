@@ -2,7 +2,7 @@
 
     <header id="home"> 
         
-        <a href="#">
+        <a href="{% if page.url == '/about.htm' %}/{% endif %}#">
             <h1>Vitor Carvalho</h1>
             <p>{{ site.role[site.active_lang] }}</p>
         </a>
@@ -18,10 +18,11 @@
             </div>
             
             <nav id="main-menu">
+               
                 <div>
                    <ul>
-                      
-                        <li><a href="#">{{ site.section-title[site.active_lang] }}</a></li>
+                                           
+                        <li><a href="{% if page.url == '/about.htm' %}/{% endif %}#">{{ site.section-title[site.active_lang] }}</a></li>
                         
                         <li>
                    
@@ -29,9 +30,9 @@
 
                                 {% for project in site.projects %}
 
-                                <li><a href="#{{ project.id | remove: '/projects/' }}">{{ project.title }}</a></li>
+                                <li><a href="{% if page.url == '/about.htm' %}/{% endif %}#{{ project.id | remove: '/projects/' }}">{{ project.title }}</a></li>
 
-                                {% endfor %}                        
+                                {% endfor %}
 
                             </ul>
                             
@@ -44,8 +45,15 @@
             </nav>
             
             <nav class="language-change">
-                <span class="strike">English</span><br>
-                <span><a href="/pt">Português</a></span>
+            <!--    <span class="strike">English</span><br>
+                <span><a href="/pt">Português</a></span>-->
+                
+                {% for lang in site.languages %}
+            
+                    <a href="{{ site.url }}/{%  unless lang == site.default_lang %}{{ lang }}{% endunless %}">{{ lang }}</a>
+                
+                {% endfor %}
+                
             </nav>
             
         </aside>

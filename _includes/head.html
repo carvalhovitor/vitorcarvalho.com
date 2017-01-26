@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="description" content="Vitor Carvalho is a graphic designer from Brazil.">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
-    <title>{{ site.title }}{% if page.title %} &mdash; {{ page.title }}{% endif %}</title>
-    <link rel="stylesheet" href="{{site.url}}/css/main.css">
+    <title>{% if page.title %}&thinsp;{{ page.title }} {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ site.url }}/css/main.css">
     <link rel="alternate" hreflang="en" href="http://vitorcarvalho.net"/>
     <link rel="alternate" hreflang="pt" href="http://vitorcarvalho.net/pt"/>
     
