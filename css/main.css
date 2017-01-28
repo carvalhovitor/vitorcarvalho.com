@@ -133,6 +133,14 @@ div > ul > li:last-child, .visit {
     text-decoration: line-through;
 }
 
+.strike {
+    pointer-events: none;
+}
+
+.language-change a {
+    display: block;
+}
+
 
 /* CONTENT */
 
@@ -190,7 +198,19 @@ img {
 }
 
 .about p + p {
-    text-indent: 3em;
+    text-indent: 0;
+}
+
+.about p:first-child {
+    margin-bottom: 1.2em;
+}
+
+.pt:after {
+    content: 'Português';
+}
+
+.en:after {
+    content: 'English';
 }
 
 

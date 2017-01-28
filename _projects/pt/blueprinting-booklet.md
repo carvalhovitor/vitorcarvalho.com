@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Blueprinting Booklet
+lang: pt
 ---
 
 Livreto impresso em Cianotipia dissecando a química por trás do processo. O objetivo deste projeto consistia em interpretar e traduzir uma dada cor em um livreto de 16 páginas de tamanho carta.

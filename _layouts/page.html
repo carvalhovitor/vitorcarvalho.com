@@ -1,0 +1,20 @@
+---
+---
+
+{% include head.html %}
+
+    {% include header.html %}
+    
+    <h2>{{ site.about[site.active_lang] }}</h2>
+    
+    <section class="about">
+    
+        <article>
+    
+            {{ content }}
+    
+        </article>
+    
+    </section>
+   
+{% include footer.html %}

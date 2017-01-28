@@ -30,24 +30,16 @@ function checkBrowserSize(){
 
 function loadResponsiveMenu() {
     
-    var $subheader = $('#home > a');
-    
-    document.location.pathname.indexOf("/pt/") == 0 ? (about = 'Sobre &amp; Contato', gd = 'Design Gráfico') : (about = 'About &amp; Contact', gd = 'Graphic Design');
-    
-    var hash = '#';
-    var location = document.location.pathname == '/about.htm' ? hash.prepend('/') : hash;
-    
     if (windowSize == 'large' || windowSize == 'medium') {
         
         $mainMenu.css('height', 'auto');
         $('.project-description').stick_in_parent({ offset_top: 60 });
-        $subheader.attr('href', location).find('p').html(gd);
+        
         
     } else if (windowSize == 'small') {
         
         $mainMenu.css('height', 0);
         $('.open-menu').removeClass('selected');
-        $subheader.attr('href', 'about.htm').find('p').html(about);
         
     }
     
