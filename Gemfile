@@ -24,4 +24,3 @@ group :jekyll_plugins do
 end
 
 gem 'jekyll-polyglot'
-gem 'jekyll-minifier'
