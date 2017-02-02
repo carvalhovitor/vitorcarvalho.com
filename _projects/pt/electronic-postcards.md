@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Postais Elétricos
+title: Postais Eletrônicos
 lang: pt
 ---
 

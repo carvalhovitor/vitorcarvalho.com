@@ -1,6 +1,6 @@
 <body>
 
-    <header id="home"> 
+    <header id="home">
         
         <a href="{% if page.url == '/about' %}/{% endif %}#">
             <h1>Vitor Carvalho</h1>
@@ -19,7 +19,6 @@
             
             <nav id="main-menu">
                
-                <div>
                    <ul>
                                            
                         <li><a href="{% if page.url == '/about' %}/{% endif %}#">{{ site.section-title[site.active_lang] }}</a></li>
@@ -41,7 +40,6 @@
                         <li><a href="about">{{ site.about[site.active_lang] }}</a></li>
                         
                     </ul>
-                </div>
             </nav>
             
             <nav class="language-change">

@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     border: 0;
+	list-style: none;
     font-size: 1em;
     color: black;
     font-weight: normal;
@@ -105,7 +106,6 @@ header {
 }
 
 li > ul {
-    list-style: none;
     margin-left: 1em;
     text-indent: -1em;
 }
@@ -260,35 +260,57 @@ img {
         left: 0;
         margin-top: 0;
         background: white;
+		overflow-y: scroll;
     }
+	
+	aside > div {
+		background: white;
+		z-index: 2;
+	}
     
     #main-menu {
-        height: 0;
-        margin-top: 3.5rem;
+		overflow-y: scroll;
+		display: block;
+		position: fixed;
+		top: 57px; right: 0; bottom: 0; left: 0;
+		margin: 0;
     }
-    
-    #main-menu div > ul > li:first-child,
-    #main-menu div > ul > li:last-child{
+	
+	#main-menu ul {
+		display: block;
+		background: white;
+	}
+	
+	#main-menu ul > li:first-child {
         display: none;
     }
-    
-    #project-list li {
-        display: block;
-        height: 20px;
-        text-indent: .75rem;
-        margin-left: -.75rem;
-        padding: 12px 0 3px;
+	
+	#main-menu ul > li:last-child a {
+		margin: 0;
+	}
+	
+	#main-menu ul, #main-menu li {
+		margin: 0;
+		text-indent: 0;
+	}
+	
+	#main-menu > ul {
+	}
+	
+	#main-menu a {
+		text-indent: 1em;
+        margin-left: 0;
+		line-height: 0;
+		padding: 1.5rem 0 1rem;
+		display: block;
         border-bottom: 1px solid black;
-    }
-    
-    #project-list li:first-child {
-        border-top: 1px solid black;
-    }
+	}
     
     aside > div {
         position: fixed;
         height: 3.5rem;
         width: 100%;
+		border-bottom: 1px solid black;
     }
     
     li a:hover {

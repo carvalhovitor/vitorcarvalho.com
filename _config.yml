@@ -28,6 +28,7 @@ collections:
   
 gems:
   - jekyll-polyglot
+  - jekyll-minifier
   
 languages: ["en", "pt"]
 default_lang: "en"
