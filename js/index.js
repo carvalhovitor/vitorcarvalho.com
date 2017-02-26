@@ -23,7 +23,6 @@ function checkBrowserSize(){
         
         windowSize = newWindowSize;
         loadResponsiveMenu();
-		console.log('load');
         
     }
 }
@@ -135,6 +134,7 @@ $(function() {
     
     // Unveils images
     
+/*
     $('img').unveil(800, function(){
         
         $(this).load(function() {
@@ -144,6 +144,7 @@ $(function() {
         })
         
     })
+*/
 
     
 })

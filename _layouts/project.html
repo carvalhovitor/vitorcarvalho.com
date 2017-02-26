@@ -17,13 +17,19 @@
 
             {% for image in site.static_files %}
 
-                {% capture images-path %}{{ page.id | remove: "/projects/" | prepend: "/images/"}}{% endcapture %}
+                {% capture path %}{{ page.id | remove: "/projects/" | prepend: "/images/"}}{% endcapture %}
+                
+      			{% assign 2x = '@2x' %}
 
-                {% if image.path contains images-path %}
+                {% if image.path contains path %}
+                
+                	{% unless image.basename contains 2x %}
 
-                <div class="img-wrapper">
-                    <img src="{{ site.url }}/images/placeholder.gif" data-src="{{ site.url }}{{ image.path }}" data-src-retina="">
-                </div>
+						<div class="img-wrapper">
+							<img srcset="{{ site.url }}{{ image.path }} 1x, {{ site.url }}{{ image.path | remove: ".jpg" | append: "@2x.jpg" }} 2x"> 
+						</div>
+                
+                	{% endunless %}
 
                 {% endif %}
 
