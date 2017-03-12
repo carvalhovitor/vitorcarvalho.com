@@ -19,11 +19,9 @@
 
                 {% capture path %}{{ page.id | remove: "/projects/" | prepend: "/images/"}}{% endcapture %}
                 
-      			{% assign 2x = '@2x' %}
-
                 {% if image.path contains path %}
                 
-                	{% unless image.basename contains 2x %}
+                	{% unless image.basename contains '@2x' %}
 
 						<div class="img-wrapper">
 							<img srcset="{{ site.url }}{{ image.path }} 1x, {{ site.url }}{{ image.path | remove: ".jpg" | append: "@2x.jpg" }} 2x"> 
