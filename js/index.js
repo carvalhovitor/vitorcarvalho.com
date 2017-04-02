@@ -70,11 +70,13 @@ function randomize() {
 
     }
     
-    $('body').show();
+    $('#main-menu').show();
     
 }
 
 $(function() {
+	
+    randomize();
     
     setInterval(function() { checkBrowserSize(); }, 100);
 	
@@ -82,9 +84,8 @@ $(function() {
     
     $('.open-menu').on('click', function() {
 
-       var $this = $(this);
-		
-		$('#main-menu > ul').slideToggle(600);
+       	var $this = $(this);
+		$('#main-menu').toggleClass('full-height').find('> ul').slideToggle(600);
 		$this.toggleClass('rotate');
 
     })
@@ -93,7 +94,7 @@ $(function() {
 
         if (windowSize === 'small') {
 
-            $('#main-menu > ul').slideUp(600);
+			$('#main-menu').removeClass('full-height').find('> ul').slideUp(600);
             $('.open-menu').removeClass('rotate');
 
         }
@@ -130,7 +131,6 @@ $(function() {
         
     })
     
-    randomize();
     
     // Unveils images
     

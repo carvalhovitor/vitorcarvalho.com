@@ -21,7 +21,7 @@ body {
     font: 0.8125em/1.3 "Helvetica Neue", Helvetica, Arial, sans-serif; 
     margin: 1.875rem;
 	margin-top: 0;
-    display: none;
+/*    display: none;	*/
 }
 
 header > a *, #main-menu > ul > li > a {
@@ -67,7 +67,11 @@ header {
     position: fixed;
     width: 120px;
     top: 60px;
-    z-index: 1;
+    z-index: 9;
+}
+
+aside {
+	display: block;
 }
 
 li > ul {
@@ -81,8 +85,9 @@ li > ul {
 
 #main-menu {
     margin-top: 2rem;
-    height: auto;
+/*    height: auto;*/
     overflow: hidden;
+	display: none;
 }
 
 .open-menu {
@@ -122,8 +127,12 @@ img {
     width: 100%;
     position: absolute;
     top: 0;
-/*    opacity: 0;*/
-    transition: opacity 450ms;
+    opacity: 0;
+    transition: opacity 750ms;
+}
+
+.loaded {
+	opacity: 1;
 }
 
 .img-wrapper{
@@ -148,6 +157,10 @@ img {
 
 .specifications {
     margin: 1rem 0;
+}
+
+.specifications:last-child {
+	margin-bottom: 0;
 }
 
 .specifications, .features, .visit {
@@ -205,11 +218,12 @@ img {
     
     header {
         margin-left: .75rem;
+		position: fixed !important;
     }
     
     header > a, .language-change {
         position: fixed;
-        top: 1rem;
+        top: 1em;
         z-index: 2;
     }
     
@@ -223,9 +237,14 @@ img {
         position: fixed;
         top: 0;
         left: 0;
-        margin: 0;
+		height: 100%;
 		overflow-y: scroll;
+		pointer-events: none;
     }
+
+	aside nav, aside div {
+		pointer-events: all;
+	}
 	
 	aside > div {
 		background: white;
@@ -233,13 +252,21 @@ img {
     
     #main-menu {
 		overflow-y: scroll;
+		width: 100%;
 		position: fixed;
-		top: 3.5rem; right: 0; bottom: 0; left: 0;
+		top: 3.5rem;
+/*		top: 3.5rem; right: 0; bottom: 0; left: 0;*/
 		margin: 0;
+/*		pointer-events: none;*/
+		pointer-events: 	
     }
 	
+	.full-height {
+		height: 100%;
+	}
+	
 	#main-menu > ul {
-		display: none;
+/*		pointer-events: all;*/
 		background: white;
 	}
 	
