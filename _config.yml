@@ -31,7 +31,9 @@ gems:
   
 languages: ["en", "pt"]
 default_lang: "en"
-exclude_from_localization: ["js", "css", "favicon.ico", "files", "javali.htm", "README.md", "Gemfile", "Gemfile.lock"]
+exclude_from_localization: ["js", "css", "favicon.ico", "files", "README.md", "Gemfile", "Gemfile.lock"]
+exclude: ["Gemfile", "Gemfile.lock", "README.md"]
+
 parallel_localization: true
 
 section-title:

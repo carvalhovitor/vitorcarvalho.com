@@ -3,7 +3,7 @@ layout: project
 title: Contemporary Theatre Collection
 ---
 
-The Contemporary Theatre Collection is a growing book series created by the publishing house Javali with the goal of publishing affordable paperbacks that celebrates contemporary Brazilian authors.
+The Contemporary Theatre Collection is a growing series created by the publishing house Javali with the goal of publishing affordable paperbacks that celebrates contemporary authors.
 
 The very specific theatre script structure was broken down into a system that uses two different typefaces, one acting as the passive voice that describes the scenes and the other as what is being spoken by the characters, creating an efficient structure for both conventional readers and rehearsing actors.
 

@@ -76,7 +76,7 @@ function randomize() {
 
 $(function() {
 	
-    randomize();
+	// randomize();
     
     setInterval(function() { checkBrowserSize(); }, 100);
 	
@@ -122,7 +122,6 @@ $(function() {
                     
                 })
                 
-                
             }
             
         return false
@@ -134,17 +133,14 @@ $(function() {
     
     // Unveils images
     
-/*
     $('img').unveil(800, function(){
-        
+		
         $(this).load(function() {
-            
-            this.style.opacity = 1;
-            
-        })
         
-    })
-*/
-
+			this.style.opacity = 1;
+        
+		})
     
+	})
+
 })

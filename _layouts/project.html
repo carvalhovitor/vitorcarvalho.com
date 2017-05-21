@@ -1,7 +1,9 @@
 ---
 ---
 
-<div id="{{ page.id | remove: '/projects/'}}">
+{% capture project %}{{ page.id | remove: '/projects/'}}{% endcapture %}
+
+<div id="{{ project }}">
 
     <article>
 
@@ -14,25 +16,15 @@
         </div>
 
         <div class="images">
-
-            {% for image in site.static_files %}
-
-                {% capture path %}{{ page.id | remove: "/projects/" | prepend: "/images/"}}{% endcapture %}
-                
-                {% if image.path contains path %}
-                
-                	{% unless image.basename contains '@2x' %}
-
-						<div class="img-wrapper">
-							<img class="load" data-srcset="{{ site.url }}{{ image.path }} 1x, {{ site.url }}{{ image.path | remove: ".jpg" | append: "@2x.jpg" }} 2x"> 
-						</div>
-                
-                	{% endunless %}
-
-                {% endif %}
-
-            {% endfor %}
-
+           
+           	{% capture language %}alt-{{ site.active_lang }}{% endcapture %}
+           	
+			{% for image in site.data[project] %}
+     			<div class="img-wrapper">
+					<img src="{{ site.filename }}/images/placeholder.gif" data-src="/images/{{ project }}/{{ image.filename }}.jpg" data-src-retina="/images/{{ project }}/{{ image.filename }}@2x.jpg" alt="{{ image[language] }}">
+				</div>
+      		{% endfor %}
+       
         </div>
 
     </article>

@@ -32,7 +32,7 @@ li a:hover, #main-menu > ul > li > a, p a {
     border-bottom: 1px solid #000;
 }
 
-p a:hover, div > ul > li > a:hover {
+p a:hover, #main-menu > ul > li > a:hover {
     border-bottom: none;
 }
 
@@ -87,7 +87,7 @@ li > ul {
     margin-top: 2rem;
 /*    height: auto;*/
     overflow: hidden;
-	display: none;
+/*	display: none;*/
 }
 
 .open-menu {
@@ -127,7 +127,7 @@ img {
     width: 100%;
     position: absolute;
     top: 0;
-    opacity: 0;
+/*    opacity: 0;*/
     transition: opacity 750ms;
 }
 
@@ -211,13 +211,14 @@ img {
 @media screen and (max-width: 767px) {
     
     body {
-        margin: 0
+        margin: 0;
+		font-size: .925em;
     }
     
     /* NAVIGATION */
     
     header {
-        margin-left: .75rem;
+        margin-left: 1rem;
 		position: fixed !important;
     }
     
@@ -229,7 +230,7 @@ img {
     
     .language-change {
         bottom: auto;
-        right: 50px;
+        right: 3.75rem;
     }
     
     aside {
@@ -254,10 +255,8 @@ img {
 		overflow-y: scroll;
 		width: 100%;
 		position: fixed;
-		top: 3.5rem;
-/*		top: 3.5rem; right: 0; bottom: 0; left: 0;*/
+		top: 4rem;
 		margin: 0;
-/*		pointer-events: none;*/
 		pointer-events: 	
     }
 	
@@ -266,7 +265,6 @@ img {
 	}
 	
 	#main-menu > ul {
-/*		pointer-events: all;*/
 		background: white;
 	}
 	
@@ -287,14 +285,14 @@ img {
 		text-indent: 1em;
         margin-left: 0;
 		line-height: 0;
-		padding: 1.325rem 0 1.25rem;
+		padding: 1.475rem 0 1.375rem;
 		display: block;
         border-bottom: 1px solid black;
 	}
     
     aside > div {
         position: fixed;
-        height: 3.5rem;
+        height: 4rem;
         width: 100%;
 		box-sizing: border-box;
 		border-bottom: 1px solid black;
@@ -312,28 +310,24 @@ img {
     h2 {
         font-size: 3em;
         line-height: .9em;
-        margin: 0 .625rem .625em;
+        margin: 0 .925rem .625em;
         padding: 0;
         position: static;
     }
     
-    .projects > div:first-of-type {
-        padding-top: 3.75rem;
-        margin-top: -3.75rem;
-    }
 	
 	.projects > div:not(:first-of-type) {
-    	padding-top: 4.75rem;
+    	padding-top: 5.25rem;
 		margin-top: -1.75rem;
 	}
 
 	.projects > div:first-of-type {
-		padding-top: 4.75rem;
+		padding-top: 5.25rem;
 		margin-top: -4.75rem;
 	}
 	
     .project-description {
-        margin: 0 .75rem 1rem;
+        margin: 0 1rem 1rem;
     }
 	
 	.about article {
@@ -342,10 +336,10 @@ img {
     
     .open-menu {
         display: block;
-        width: 2.75rem;
-        height: 2.75rem;
+        width: 3rem;
+        height: 3rem;
         position: absolute;
-        top: .625rem;
+        top: .725rem;
         right: .25rem;
         cursor: pointer;
         -ms-transform: rotate(180deg);
@@ -361,11 +355,11 @@ img {
     }
     
     .about article {
-        padding-top: 0.75rem;
+        padding-top: .75rem;
     }
     
     .about p {
-        font-size: 1.5em;
+        font-size: 1.375em;
     }
     
 }
