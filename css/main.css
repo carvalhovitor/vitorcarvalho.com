@@ -131,7 +131,7 @@ img {
     transition: opacity 750ms;
 }
 
-.loaded {
+.lazyloaded {
 	opacity: 1;
 }
 

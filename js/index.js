@@ -130,17 +130,4 @@ $(function() {
         
     })
     
-    
-    // Unveils images
-    
-    $('img').unveil(800, function(){
-		
-        $(this).load(function() {
-        
-			this.style.opacity = 1;
-        
-		})
-    
-	})
-
 })

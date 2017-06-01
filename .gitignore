@@ -1,6 +1,5 @@
 .DS_Store
 /_site
 /files
-/images
-javali.htm
-leosantana.htm
+*.jpg
+*.png

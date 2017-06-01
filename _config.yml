@@ -24,15 +24,15 @@ github_username: carvalhovitor
 markdown: kramdown
 collections:
  projects:
-  output: true
+  output: false
   
 gems:
   - jekyll-polyglot
   
 languages: ["en", "pt"]
 default_lang: "en"
-exclude_from_localization: ["js", "css", "favicon.ico", "files", "README.md", "Gemfile", "Gemfile.lock"]
-exclude: ["Gemfile", "Gemfile.lock", "README.md"]
+exclude_from_localization: ["js", "css", "favicon.ico", "files", "README.md", "Gemfile", "Gemfile.lock", "images"]
+exclude: ["Gemfile", "Gemfile.lock", "README.md", "feed.xml", "feed.xslt.xml"]
 
 parallel_localization: true
 

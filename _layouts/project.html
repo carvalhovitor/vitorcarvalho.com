@@ -21,7 +21,10 @@
            	
 			{% for image in site.data[project] %}
      			<div class="img-wrapper">
-					<img src="{{ site.filename }}/images/placeholder.gif" data-src="/images/{{ project }}/{{ image.filename }}.jpg" data-src-retina="/images/{{ project }}/{{ image.filename }}@2x.jpg" alt="{{ image[language] }}">
+     				<picture>
+     					<source media="(min-width: 767px)" data-srcset="/images/{{ project }}/{{ image.filename }}.jpg, /images/{{ project }}/{{ image.filename }}@2x.jpg 2x">
+						<img class="lazyload" src="{{ site.filename }}/images/placeholder.png" data-src="/images/{{ project }}/{{ image.filename }}.jpg" alt="{{ image[language] }}">
+					</picture>
 				</div>
       		{% endfor %}
        
