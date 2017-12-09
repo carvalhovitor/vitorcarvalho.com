@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Electronic Postcards
+order: 2
 ---
 
 A series of postcards conceived to emphasize the relationship between analog and contemporary digital tools as a working methodology.

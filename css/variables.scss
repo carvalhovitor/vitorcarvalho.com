@@ -1,0 +1,17 @@
+$descriptionWidth: 16rem;
+$menuWidth: 8.5rem;
+$gutter: 1.5rem;
+
+.page-link {
+    border-bottom: 1px solid #000;
+
+    &:hover {
+        border-bottom: none;
+    }
+}
+
+.general-link {
+    &:hover {
+        border-bottom: 1px solid #000;
+    }
+}

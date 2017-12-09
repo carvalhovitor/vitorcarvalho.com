@@ -2,6 +2,7 @@
 layout: project
 title: Holocausto
 lang: pt
+order: 9
 ---
 
 Livro de bolso inteiramente tipográfico, realizado a partir de um <a href="https://en.wikipedia.org/wiki/The_Holocaust" target="_blank">artigo de Wikipedia</a> e projetado manipulando ideas avessas de peso e vazio.

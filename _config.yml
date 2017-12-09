@@ -17,7 +17,7 @@ title: Vitor Carvalho
 email: vitor@vitorcarvalho.net
 description: > # this means to ignore newlines until "baseurl:"
   Vitor Carvalho is a Graphic Designer from Brazil.
-url: "http://vitorcarvalho.net" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://vitorcarvalho.net" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: carvalhovitor
 
 # Build settings
@@ -32,7 +32,7 @@ gems:
 languages: ["en", "pt"]
 default_lang: "en"
 exclude_from_localization: ["js", "css", "favicon.ico", "files", "README.md", "Gemfile", "Gemfile.lock", "images"]
-exclude: ["Gemfile", "Gemfile.lock", "README.md", "feed.xml", "feed.xslt.xml"]
+exclude: ["Gemfile", "Gemfile.lock", "README.md", "feed.xml", "feed.xslt.xml", "main.scss"]
 
 parallel_localization: true
 

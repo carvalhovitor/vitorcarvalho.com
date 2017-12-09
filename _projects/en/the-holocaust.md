@@ -1,6 +1,7 @@
 ---
 layout: project
 title: The Holocaust
+order: 9
 ---
 
 A type-only pocket-sized paperback book made from a <a href="https://en.wikipedia.org/wiki/The_Holocaust" target="_blank">wikipedia article</a> and designed by playing with both ideas of heaviness and voidness.

@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Contemporary Theatre Collection
+order: 1
 ---
 
 The Contemporary Theatre Collection is a growing series created by the publishing house Javali with the goal of publishing affordable paperbacks that celebrates contemporary authors.
@@ -13,3 +14,5 @@ Keeping the red as the series brand, each book cover features a different typefa
 
 <p class="specifications">12,25 × 18,5cm, offset print, paperback<br>
 Trilogia Abnegação: 208 pages</p>
+
+<p class="features">Featured on <a href="https://goo.gl/ULiVBB" target="_blank">Bonde</a></p>

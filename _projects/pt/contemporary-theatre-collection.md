@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Coleção Teatro Contemporâneo
+order: 1
 lang: pt
 ---
 
@@ -14,3 +15,5 @@ Mantendo o vermelho como marca, cada capa apresenta uma face tipográfica única
 
 <p class="specifications">12,25 × 18,5cm, impresso em offset<br>
 Trilogia Abnegação: 208 páginas</p>
+
+<p class="features">Publicado no <a href="https://goo.gl/ULiVBB" target="_blank">Bonde</a></p>

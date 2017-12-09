@@ -9,7 +9,9 @@
        
         <section class="projects" id="projects">
 
-            {% for project in site.projects %}
+            {% assign projects = site.projects | sort: 'order' %}
+
+            {% for project in projects %}
               
                 {{ project }}
                                 

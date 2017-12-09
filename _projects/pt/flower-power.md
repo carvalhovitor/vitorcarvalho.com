@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Flower Power
+order: 3
 lang: pt
 ---
 
