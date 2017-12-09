@@ -2,8 +2,12 @@ $descriptionWidth: 16rem;
 $menuWidth: 8.5rem;
 $gutter: 1.5rem;
 
-.page-link {
+.underline {
     border-bottom: 1px solid #000;
+}
+
+.page-link {
+    @extend .underline;
 
     &:hover {
         border-bottom: none;
@@ -12,6 +16,24 @@ $gutter: 1.5rem;
 
 .general-link {
     &:hover {
-        border-bottom: 1px solid #000;
+        @extend .underline;
     }
 }
+
+@media screen and (max-width: 767px) {
+
+    .fixed-menu {
+        position: fixed;
+        top: 1em;
+        z-index: 2;
+    }
+
+}
+
+
+@mixin rotate($angle) {
+    -webkit-transform: rotate($angle);
+       -moz-transform: rotate($angle);
+        -ms-transform: rotate($angle);
+            transform: rotate($angle);
+  }
