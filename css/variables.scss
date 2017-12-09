@@ -1,4 +1,4 @@
-$descriptionWidth: 16rem;
+$descriptionWidth: 17.25rem;
 $menuWidth: 8.5rem;
 $gutter: 1.5rem;
 
@@ -14,7 +14,7 @@ $gutter: 1.5rem;
     }
 }
 
-.general-link {
+.menu-link {
     &:hover {
         @extend .underline;
     }
@@ -29,7 +29,6 @@ $gutter: 1.5rem;
     }
 
 }
-
 
 @mixin rotate($angle) {
     -webkit-transform: rotate($angle);
