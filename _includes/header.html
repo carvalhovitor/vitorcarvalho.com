@@ -2,7 +2,7 @@
 
     <header id="home">
         
-        <a href="{% if page.url == '/about' %}/{% endif %}#">
+        <a href="{% if page.url == '/about' %}/{% else %}#projects{% endif %}">
             <h1>Vitor Carvalho</h1>
             <p>{{ site.role[site.active_lang] }}</p>
         </a>
@@ -21,7 +21,7 @@
                
 				<ul>
                                            
-					<li><a href="{% if page.url == '/about' %}/{% else %}#{% endif %}">{{ site.section-title[site.active_lang] }}</a></li>
+					<li><a href="{% if page.url == '/about' %}/{% else %}#projects{% endif %}">{{ site.section-title[site.active_lang] }}</a></li>
 
 					<li>
 

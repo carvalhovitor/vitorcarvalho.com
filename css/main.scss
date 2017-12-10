@@ -138,6 +138,8 @@ img {
 .project-description {
     float: left;
     width: $descriptionWidth;
+    position: sticky;
+    top: 60px;
 }
 
 .projects {

@@ -109,7 +109,9 @@ img {
 
 .project-description {
   float: left;
-  width: 17.25rem; }
+  width: 17.25rem;
+  position: sticky;
+  top: 60px; }
 
 .projects > div:not(:first-of-type) {
   padding-top: 3.75rem; }

@@ -20,18 +20,24 @@ function checkBrowserSize(){
     }
 }
 
+
+
 function loadResponsiveMenu() {
+
     if (windowSize == 'large' || windowSize == 'medium') {
 		$('#main-menu > ul').show();
-        $('.project-description').stick_in_parent({ offset_top: 60 });
     } else if (windowSize == 'small') {
 		$('#main-menu > ul').hide();
         $('.open-menu').removeClass('rotate');
     }
-    
-    if (windowSize == 'medium' || windowSize == 'small') {
-        $('.project-description').trigger('sticky_kit:detach');        
-    }
+
+    // if (!Modernizr.csspositionsticky) {
+    //     // if (windowSize == 'large') {
+    //     //     $('.project-description').stick_in_parent({ offset_top: 60 });
+    //     // } else {
+    //     //     $('.project-description').trigger('sticky_kit:detach');
+    //     // }
+    // }
 }
 
 
