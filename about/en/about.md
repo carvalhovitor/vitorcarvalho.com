@@ -3,6 +3,7 @@ layout: page
 title: About
 permalink: about
 lang: en
+description: Vitor received his BFA in Graphic Design from the Universidade do Estado de Minas Gerais, completed after a year studying at Parsons School of Design, in New York City. If you want to know more you might want to download his resume or get in touch.
 ---
            
 
