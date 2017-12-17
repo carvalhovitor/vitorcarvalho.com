@@ -4,4 +4,4 @@
 *.jpg
 *.png
 *.map
-css/.sass-cache
+*.css

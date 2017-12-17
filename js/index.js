@@ -4,9 +4,9 @@ $(function() {
         $('#menu-toggle').trigger('click');
     })
 
-    $('#menu-toggle').on('click', function() {
-        $('html, body').toggleClass('lock');
-    })
+    // $('#menu-toggle').on('click', function() {
+    //     $('html, body').toggleClass('lock');
+    // })
     
     $('a[href*="#"]').click(function(event) {
       // On-page links
