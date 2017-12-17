@@ -3,5 +3,5 @@
 /files
 *.jpg
 *.png
-.map
+*.map
 css/.sass-cache

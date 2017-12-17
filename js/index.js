@@ -1,69 +1,13 @@
-var windowSize = '';
-
-function checkBrowserSize(){ 
-    var windowWidth = $(window).width();
-    
-    if (windowWidth > 1024) {
-        newWindowSize = 'large';
-    } else if (windowWidth > 767 && windowWidth <= 1024) {
-        newWindowSize = 'medium';
-    } else {
-        newWindowSize = 'small';
-    }
-    
-    // If the newWindowSize is different from what the
-    // windowSize currently is, then make them equal and
-    // call the loadResponsiveMenu function
-    if (windowSize != newWindowSize) {
-        windowSize = newWindowSize;
-        loadResponsiveMenu();
-    }
-}
-
-
-
-function loadResponsiveMenu() {
-
-    if (windowSize == 'large' || windowSize == 'medium') {
-		$('#main-menu > ul').show();
-    } else if (windowSize == 'small') {
-		$('#main-menu > ul').hide();
-        $('.open-menu').removeClass('rotate');
-    }
-
-    // if (!Modernizr.csspositionsticky) {
-    //     // if (windowSize == 'large') {
-    //     //     $('.project-description').stick_in_parent({ offset_top: 60 });
-    //     // } else {
-    //     //     $('.project-description').trigger('sticky_kit:detach');
-    //     // }
-    // }
-}
-
-
 $(function() {
-    
-    setInterval(function() { 
-        checkBrowserSize();
-    }, 100);
-	
-    // Mobile menu
-    
-    $('.open-menu').on('click', function() {
-        var $this = $(this);
-           
-		$('#main-menu').toggleClass('full-height').find('> ul').slideToggle(600);
-		$this.toggleClass('rotate');
-    })
-    
-    $('h1, li a').on('click', function() {
-        if (windowSize == 'small') {
-			$('#main-menu').removeClass('full-height').find('> ul').slideUp(600);
-            $('.open-menu').removeClass('rotate');
-        }
-    })
-    
 
+    $('#menu a').on('click', function() {
+        $('#menu-toggle').trigger('click');
+    })
+
+    $('#menu-toggle').on('click', function() {
+        $('html, body').toggleClass('lock');
+    })
+    
     $('a[href*="#"]').click(function(event) {
       // On-page links
       if (
@@ -75,7 +19,7 @@ $(function() {
         var $linkElem = $(this),
             target = $(this.hash);
 
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        // target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
         // Does a scroll target exist?
         if (target.length) {
           // Only prevent default if animation is actually gonna happen

@@ -20,16 +20,6 @@ $gutter: 1.5rem;
     }
 }
 
-@media screen and (max-width: 767px) {
-
-    .fixed-menu {
-        position: fixed;
-        top: 1em;
-        z-index: 2;
-    }
-
-}
-
 @mixin rotate($angle) {
     -webkit-transform: rotate($angle);
        -moz-transform: rotate($angle);
