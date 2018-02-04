@@ -4,10 +4,6 @@ $(function() {
         $('#menu-toggle').trigger('click');
     })
 
-    // $('#menu-toggle').on('click', function() {
-    //     $('html, body').toggleClass('lock');
-    // })
-    
     $('a[href*="#"]').click(function(event) {
       // On-page links
       if (
@@ -32,5 +28,8 @@ $(function() {
         }
       }
     });
-    
+
+    // Sticky positioning polyfill
+
+    stickybits('.project-description', {stickyBitStickyOffset: 60});
 })

@@ -32,7 +32,12 @@ gems:
 languages: ["en", "pt"]
 default_lang: "en"
 exclude_from_localization: ["js", "css", "favicon.ico", "files", "README.md", "Gemfile", "Gemfile.lock", "images"]
-exclude: ["Gemfile", "Gemfile.lock", "README.md"]
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - gulpfile.js
 
 parallel_localization: true
 

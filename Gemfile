@@ -21,4 +21,3 @@ gem "minima", "~> 2.0"
 # If you have any plugins, put them here!
 
 gem 'jekyll-polyglot'
-gem 'jekyll-minifier'
