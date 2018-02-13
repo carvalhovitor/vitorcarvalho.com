@@ -1,6 +1,7 @@
 $descriptionWidth: 17.25rem;
 $menuWidth: 8.5rem;
 $gutter: 1.5rem;
+$lineHeight: 18px;
 
 .underline {
     border-bottom: 1px solid #000;
@@ -25,4 +26,4 @@ $gutter: 1.5rem;
        -moz-transform: rotate($angle);
         -ms-transform: rotate($angle);
             transform: rotate($angle);
-  }
+}
