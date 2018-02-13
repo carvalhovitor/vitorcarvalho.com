@@ -8,3 +8,4 @@
 Gemfile.lock
 css/.sass-cache/
 node_modules
+.sass-cache
