@@ -1,33 +1,36 @@
-var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var cssMin = require('gulp-css');
-var sass = require('gulp-sass');
-var htmlmin = require('gulp-htmlmin');
+"use strict";
 
-gulp.task('css', function() {
-    gulp.src('./_site/css/main.css')
-        .pipe(cssMin())
-        .pipe(gulp.dest('./_site/css'));
-});
+const gulp = require('gulp'),
+    uglify = require('gulp-uglify'),
+    concat = require('gulp-concat'),
+    cssMin = require('gulp-css'),
+    // sass = require('gulp-sass'),
+    htmlmin = require('gulp-htmlmin');
 
-gulp.task('sass', function() {
-    gulp.src('./css/main.scss')
-        .pipe(gulp.dest('./css'));
-});
+const site = './_site/';
 
-gulp.task('scripts', function() {
+gulp.task('css', () => {
     gulp.src([
-        './js/plugins.js',
-        './js/index.js'
+           site + 'css/main.css'
+        ])
+        // .pipe(concat('main.css'))
+        // .pipe(sass())
+        .pipe(cssMin())
+        .pipe(gulp.dest(site + 'css'));
+});
+
+gulp.task('scripts', () => {
+    gulp.src([
+        site + 'js/index.js'
     ])
         .pipe(uglify())
-        .pipe(gulp.dest('./_site/js'))
+        .pipe(gulp.dest(site + 'js'))
 });
 
-gulp.task('html', function() {
-    gulp.src('_site/*.html')
+gulp.task('html', () => {
+    gulp.src('./_site/**/*.html')
         .pipe(htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest('_site'));
+        .pipe(gulp.dest('./_site/'));
 })
 
-gulp.task('default', ['sass', 'css', 'scripts', 'html']);
+gulp.task('default', ['css', 'scripts', 'html']);
