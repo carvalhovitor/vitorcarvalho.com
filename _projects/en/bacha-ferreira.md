@@ -1,0 +1,11 @@
+---
+layout: project
+title: Bacha & Ferreira
+order: 16
+---
+
+Identity for a criminal law society working mostly for low-income clients. The logotype was designed by redrawing the letter ‘a’ of an otherwise austere typeface into a custom single-case version.
+
+The printed matter dials down the presence of the logotype in favor of a clear presentation of the contact information.
+
+<p class="specifications">With Júlia Maia and Augusto Brant</p>

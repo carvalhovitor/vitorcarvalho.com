@@ -1,0 +1,12 @@
+---
+layout: project
+title: Bacha & Ferreira
+order: 16
+lang: pt
+---
+
+Identidade para sociedade de advocacia criminal que trabalha majoritariamente para clientes de baixa renda. O logotipo foi projetado pelo redesenho da letra “a” (em uma versão de um andar) de uma fonte que de outro modo seria excessivamente austera.
+
+O material impresso mitiga a presença do logotipo em favor de uma apresentação clara das informações de contato.
+
+<p class="specifications">Com Júlia Maia e Augusto Brant</p>
