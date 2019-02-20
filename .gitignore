@@ -1,11 +1,39 @@
+# System files
+# ------------
+
+Icon
 .DS_Store
-/_site
-/files
-*.jpg
-*.png
-*.map
-*.css
-Gemfile.lock
-css/.sass-cache/
-node_modules
-.sass-cache
+
+# Temporary files
+# ---------------
+
+/thumbs/*
+!/thumbs/index.html
+
+/site/cache/*
+!/site/cache/index.html
+
+# -------------SECURITY-------------
+# NEVER publish these files via Git!
+# -------------SECURITY-------------
+
+# Kirby accounts
+# ---------------
+
+/site/accounts/*
+!/site/accounts/index.html
+
+# Avatars
+# ---------------
+
+/assets/avatars/
+!/assets/avatars/index.html
+/content
+google84cb81f5c6527c54.html
+
+# Custom
+/deadobjects
+/assets/.sass-cache
+/assets/fonts
+/assets/css
+license.md

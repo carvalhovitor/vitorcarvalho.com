@@ -1,0 +1,24 @@
+title: Project
+
+files:
+  sortable: true
+
+pages:
+  template: project
+
+pages: false
+
+fields:
+  title:
+    label: Title
+    type:  text
+
+  text:
+    label: Text
+    type:  textarea
+
+files:
+  fields:
+    alt:
+      label: Alt Text
+      type: text
