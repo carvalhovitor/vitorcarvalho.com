@@ -47,6 +47,7 @@ $('img').on('click', function() {
   }
 })
 
+
 // HEADER MARGIN UPDATE
 
 $(document).ready(function() {
