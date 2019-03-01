@@ -74,12 +74,7 @@
                         <picture>
                             <source data-srcset="<?php echo thumb($image, array('width' => 1280, 'quality' => 100))->url(); ?> 1x, <?= $image->url(); ?> 2x" />
                             <img class="lazyload" alt="<?= $image->alt()->html() ?>">
-                            <div class="placeholder">
-                              <svg>
-                                <line x1="0" y1="100%" x2="100%" y2="0"/>
-                                <line x1="0" y1="0" x2="100%" y2="100%"/>
-                              </svg>
-                            </div>
+                            <div class="loading-animation"></div>
                         </picture>
 
                       </div>
