@@ -117,31 +117,12 @@ img {
     cursor: pointer;
 
     &.lazyloaded {
-        // opacity: 1;
+        opacity: 1;
     }
 }
 
-.loading-animation {
-    // opacity: 1;
-    // border: 1px solid black;
-    // height: 100px;
-    // width: 100px;
-    // border-radius: 50%;
-    // animation: glow 2s infinite;
-    position: absolute;
-    // left: 50%;
-    // top: 50%;
-    border: 1px solid black;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
-
-
-.lazyloaded ~ .loading-animation {
-    // display: none;
+.lazyloaded ~ .placeholder {
+    display: none;
 }
 
 @keyframes glow {
