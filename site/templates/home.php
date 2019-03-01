@@ -4,16 +4,16 @@
 
     <div class="wrapper">
 
-    <header id="about">
+    <header>
 
         <section class="about-wrapper">
 
           <p class="about"><?= $site->description()->html() ?></p>
 
           <section class="contact">
-            <p>vitor@vitorcarvalho.net</p>
-            <p>+55 31 971 711 080</p>
             <p>Belo Horizonte, Brasil</p>
+            <p>+55 31 971 711 080</p>
+            <p><a target="_blank" href="mailto:vitor@vitorcarvalho.net">vitor@vitorcarvalho.net</a></p>
           </section>
 
         </section>
@@ -25,6 +25,8 @@
         </nav>
         
     </header>
+
+    <main>
 
     <aside id="aside">
 
@@ -47,7 +49,6 @@
         
     </aside>
 
-    <main>
 
       <div class="content-wrapper">
         
@@ -69,7 +70,7 @@
                   <div class="images">
                     <?php foreach($project->images()->sortBy('sort', 'asc') as $image): ?>
 
-                      <div class="img-wrapper">
+                      <div class="image-wrapper">
                         <picture>
                             <source data-srcset="<?php echo thumb($image, array('width' => 1280, 'quality' => 100))->url(); ?> 1x, <?= $image->url(); ?> 2x" />
                             <img class="lazyload" data-src="assets/images/placeholder.png" alt="<?= $image->alt()->html() ?>">
