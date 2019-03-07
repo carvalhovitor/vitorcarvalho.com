@@ -192,9 +192,7 @@ footer {
     left: 2rem;
 
     a {
-        display: block;
-        opacity: 0;
-        transition: 200ms;
+        display: none;
 
         svg {
             fill: none;

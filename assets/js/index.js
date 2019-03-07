@@ -50,12 +50,6 @@ $('img').on('click', function() {
 
 // HEADER MARGIN UPDATE
 
-$(document).ready(function() {
-  setMargin();
-  $('body').css('opacity', 1);
-});
-
-$(window).resize(setMargin);
 
 var $main = $('main'),
     $header = $('header');
@@ -69,7 +63,9 @@ function setMargin() {
 
     $main.css('margin-top', newHeaderHeight);
   }
+
 }
+$(window).resize(setMargin);
 
 // ARROW
 
@@ -77,9 +73,15 @@ $arrow = $('a[href="#about"]');
 
 $(window).on('scroll', function() {
   if ($(window).scrollTop() > $header.outerHeight(true)) {
-    $arrow.css('opacity', 1);
+    $arrow.fadeIn(200)
   }
   else {
-    $arrow.css('opacity', 0);
+    $arrow.fadeOut(200);
   }
 })
+
+// DOCUMENT READY
+
+$(function() {
+  $.when(setMargin()).then($('body').css('opacity', 1));
+});
