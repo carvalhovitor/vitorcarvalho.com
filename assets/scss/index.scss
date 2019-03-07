@@ -1,11 +1,12 @@
 @import 'reset';
 @import 'variables';
 @import 'font';
+@import url("https://use.typekit.net/iwz1cdz.css");
 
 // GENERAL
 
 body {
-    font-family: "h-textbook", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: neue-haas-grotesk-text, "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: $lineHeight;
     margin: 0 0 1.875rem;
     font-size: 18px;
@@ -46,13 +47,12 @@ i {
 
 aside {
     width: $menuWidth;
+    margin-right: $interiorMargin;
 
     & > div {
         position: sticky;
         top: 2rem;
     }
-
-    padding-left: $leftMargin;
 }
 
 ul > li {
@@ -60,7 +60,7 @@ ul > li {
     text-indent: -1em;
 }
 
-.visit, #menu {
+.visit {
     margin-top: $lineHeight;
 }
 
@@ -70,13 +70,14 @@ ul > li {
 main {
     width: 100%;
     background: white;
-    padding-top: 1.75em;
     display: flex;
     border-top: 1px solid black;
 
     .content-wrapper {
         flex: 1;
     }
+
+    padding: 2rem $margin $margin;
 }
 
 h3 {
@@ -85,7 +86,7 @@ h3 {
 
 .images {
     max-width: 1280px;
-    margin-left: $descriptionWidth + $gutter;
+    margin-left: $descriptionWidth + $interiorMargin;
 }
 
 .image-wrapper { 
@@ -111,38 +112,9 @@ img {
     }
 }
 
-.loading-animation {
-    opacity: 1;
-    background: black;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    animation: glow 2s infinite;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-}
-
-.lazyloaded ~ .loading-animation {
-    display: none;
-}
-
-@keyframes glow {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-}
-
 .active {
-    color: magenta;
+    text-decoration: line-through;
     pointer-events: none;
-}
-
-.content-wrapper {
-    padding: 0 1.75rem;
 }
 
 .projects {
@@ -188,7 +160,7 @@ header {
     top: 0;
     z-index: -1;
     width: 100%;
-    padding: 1.5rem 1.75rem 0 $leftMargin;
+    padding: 1.5rem $margin 0;
     margin-bottom: 1.75rem;
     display: flex;
     justify-content: space-between;
@@ -197,8 +169,8 @@ header {
         display: flex;
 
         .about {
-            margin-right: 2em;
-            max-width: 540px;
+            margin-right: $interiorMargin;
+            max-width: 560px;
         }
     }
 
@@ -215,15 +187,25 @@ header {
 // FOOTER
 
 footer {
-    display: none;
     position: fixed;
-    bottom: 0;
-    right: 0;
-    
-    a svg {
-        fill: magenta;
-        width: 60px;
-        height: 60px;
+    bottom: 1.5rem;
+    left: 2rem;
+
+    a {
+        display: block;
+        opacity: 0;
+        transition: 200ms;
+
+        svg {
+            fill: none;
+            stroke-width: 1;
+            stroke: black;
+            transition: 300ms;
+        }
+
+        & {
+            width: 100%;
+        }
     }
 }
 
@@ -293,6 +275,8 @@ footer {
 	
     main {
         display: block;
+        padding: .75rem 0;
+        border: none;
 
         .content-wrapper {
             width: 100%;
@@ -301,6 +285,7 @@ footer {
 
         aside {
             padding-top: 0;
+            margin-right: 0;
         }
 
         .project {
@@ -335,10 +320,6 @@ footer {
 
             a {
                 color: inherit;
-
-                &.active {
-                    color: lime;
-                }
             }
         }
 
@@ -365,6 +346,8 @@ footer {
     // FOOTER
 
     footer {
-        display: block;
+        left: auto;
+        right: 1rem;
+        bottom: 1rem;
     }
 }

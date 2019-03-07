@@ -32,7 +32,7 @@
 
         <div>
         
-            <p><a href="#about">Vitor Carvalho</a></p>
+            <!-- <p><a href="#about">Vitor Carvalho</a></p> -->
 
             <nav id="menu">
 
@@ -74,7 +74,7 @@
                         <picture>
                             <source data-srcset="<?php echo thumb($image, array('width' => 1280, 'quality' => 100))->url(); ?> 1x, <?= $image->url(); ?> 2x" />
                             <img class="lazyload" alt="<?= $image->alt()->html() ?>">
-                            <div class="loading-animation"></div>
+                            <!-- <div class="loading-animation"></div> -->
                         </picture>
 
                       </div>
@@ -97,16 +97,16 @@
     <footer>
     
         <a href="#about">
-            <xml version="1.0" encoding="utf-8"?>
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 30" xml:space="preserve">
-                <polygon points="21.4,14.5 15,8 8.6,14.5 9.2,15.1 14.5,9.6 14.5,22 15.4,22 15.4,9.6 20.8,15.1 "/>
+            <svg preserveAspectRatio="none" width="30" height="60">
+              <polyline points="5,15 15,0 25,15"/>
+              <line x1="15" y1="0" x2="15" y2="100"/>
             </svg>
         </a>
         
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <?php echo krb(['assets/js/plugins.js', 'assets/js/index.js'], 'js', 1.0, false, false, false); ?>
+    <?php echo krb(['assets/js/plugins.js', 'assets/js/index.js'], 'js', 1.2, false, false, false); ?>
    
     </body>
 </html>

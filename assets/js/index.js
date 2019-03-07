@@ -70,3 +70,16 @@ function setMargin() {
     $main.css('margin-top', newHeaderHeight);
   }
 }
+
+// ARROW
+
+$arrow = $('a[href="#about"]');
+
+$(window).on('scroll', function() {
+  if ($(window).scrollTop() > $header.outerHeight(true)) {
+    $arrow.css('opacity', 1);
+  }
+  else {
+    $arrow.css('opacity', 0);
+  }
+})
