@@ -37,7 +37,7 @@ $('img').on('click', function() {
       nextId = project.next('.project').attr('id');
 
   if (window.location.hash != id) {
-    history.pushState(null, null, '#' + (next.length == 1 ? nextId : id));
+    history.pushState(null, null, '#' + (next.length === 1 && nextId != undefined ? nextId : id));
   }
 
   if (next.length) {
@@ -49,7 +49,6 @@ $('img').on('click', function() {
 
 
 // HEADER MARGIN UPDATE
-
 
 var $main = $('main'),
     $header = $('header');
