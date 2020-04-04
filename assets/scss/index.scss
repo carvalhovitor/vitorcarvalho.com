@@ -1,6 +1,5 @@
 @import 'reset';
 @import 'variables';
-@import 'font';
 @import url("https://use.typekit.net/iwz1cdz.css");
 
 // GENERAL
@@ -11,7 +10,7 @@ body {
     margin: 0 0 1.875rem;
     font-size: 18px;
     opacity: 0;
-    transition: opacity 300ms;
+    transition: opacity 500ms;
 }
 
 p a {
@@ -39,7 +38,7 @@ i {
 }
 
 ::selection {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #ffffa0;
 }
 
 
@@ -108,7 +107,7 @@ img {
     cursor: pointer;
 
     &.lazyloaded {
-        opacity: 1;
+        opacity: 1 !important;
     }
 }
 

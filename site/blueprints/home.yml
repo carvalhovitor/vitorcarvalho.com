@@ -1,8 +1,5 @@
 title: Home
-
 files: false 
 
-fields:
-  title:
-    label: Title
-    type:  text
+pages:
+  template: project

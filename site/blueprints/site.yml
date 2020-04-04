@@ -4,7 +4,25 @@ fields:
   title:
     label: Title
     type:  text
+    width: 1/4
+
+  location:
+    label: Location
+    type: text
+    width: 1/4
+
+  phone:
+    label: Phone
+    type: tel
+    translate: false
+    width: 1/4
+
+  email:
+    label: E-mail
+    type: email
+    translate: false
+    width: 1/4
 
   description:
-    label: Description
-    type:  textarea
+    label: About
+    type: textarea

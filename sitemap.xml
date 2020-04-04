@@ -4,24 +4,20 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+            
 <url>
-  <loc>https://vitorcarvalho.net/</loc>
+  <loc>https://vitorcarvalho.com/</loc>
   <lastmod>2018-11-02T19:53:21+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://vitorcarvalho.net/en</loc>
+  <loc>https://vitorcarvalho.com/en</loc>
   <lastmod>2018-11-02T19:53:21+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://vitorcarvalho.net/deadobjects/</loc>
+  <loc>https://vitorcarvalho.com/deadobjects/</loc>
   <lastmod>2018-11-02T19:53:21+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
-
 </urlset>

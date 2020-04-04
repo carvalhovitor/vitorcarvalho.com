@@ -1,12 +1,8 @@
 title: Project
+pages: false
 
 files:
   sortable: true
-
-pages:
-  template: project
-
-pages: false
 
 fields:
   title:
