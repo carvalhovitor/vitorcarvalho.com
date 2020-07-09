@@ -1,0 +1,57 @@
+title: Schedule
+pages: false
+files: false
+
+fields:
+  title:
+    label: Title
+    type: text
+    width: 3/4
+    required: true
+  year:
+    label: Year
+    type: number
+    min: 2016
+    width: 1/4
+    required: true
+  janeiro:
+    label: Janeiro
+    extends: monthOdd
+  fevereiro:
+    label: Fevereiro
+    extends: monthEven
+    fields:
+      from:
+        max: 28
+      to:
+        max: 28
+  março:
+    label: Março
+    extends: monthOdd
+  abril:
+    label: Abril
+    extends: monthEven
+  maio:
+    label: Maio
+    extends: monthOdd
+  junho:
+    label: Junho
+    extends: monthEven
+  julho:
+    label: Julho
+    extends: monthOdd
+  agosto:
+    label: Agosto
+    extends: monthOdd
+  setembro:
+    label: Setembro
+    extends: monthEven
+  outubro:
+    label: Outubro
+    extends: monthOdd
+  novembro:
+    label: Novembro
+    extends: monthEven
+  dezembro:
+    label: Dezembro
+    extends: monthOdd

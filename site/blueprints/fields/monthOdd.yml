@@ -1,0 +1,18 @@
+type: structure
+style: table
+fields:
+  from:
+    width: 1/2
+    label: From
+    type: number
+    max: 31
+    required: true
+  to:
+    width: 1/2
+    label: To
+    type: number
+    max: 31
+  description:
+    label: Description
+    type: text
+    required: true
