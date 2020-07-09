@@ -38,25 +38,29 @@ i {
 }
 
 ::selection {
-    background-color: #ffffa0;
+    background-color: rgba(255, 255, 160, .99);
+}
+
+img {
+    user-select: none;
 }
 
 
 // SIDEBAR
 
+aside > div, .project-description {
+    position: sticky;
+    top: 2rem;
+}
+
 aside {
     width: $menuWidth;
     margin-right: $interiorMargin;
 
-    & > div {
-        position: sticky;
-        top: 2rem;
+    ul > li {
+        margin-left: 1em;
+        text-indent: -1em;
     }
-}
-
-ul > li {
-    margin-left: 1em;
-    text-indent: -1em;
 }
 
 .visit {
@@ -68,15 +72,57 @@ ul > li {
 
 main {
     width: 100%;
-    background: white;
+    background: #fff;
     display: flex;
     border-top: 1px solid black;
+    padding: 2rem $margin $margin;
 
     .content-wrapper {
         flex: 1;
     }
 
-    padding: 2rem $margin $margin;
+    // Schedule
+
+    &.schedule {
+        flex-direction: column;
+
+        section {
+            line-height: 1.8em;
+            margin-bottom: 1.2em;
+
+            p {
+                display: inline-block;
+                margin-left: 1em;
+            }
+
+            span {
+                flex: 0 0 4.5em;
+            }
+            
+            &:not(:first-of-type) {
+                padding-top: 1.2em;
+                border-top: 1px solid #000;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+                font-weight: bold;
+                line-height: 2em;
+            }
+
+            li {
+                display: flex;
+            }
+        }
+    }
+}
+
+.past, .past * {
+    color: #d1d1d1;
+}
+
+.current, .current * {
+    color: blue;
 }
 
 h3 {
@@ -104,7 +150,6 @@ img {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
-    cursor: pointer;
 
     &.lazyloaded {
         opacity: 1 !important;
@@ -118,21 +163,15 @@ img {
 
 .projects {
     & > div:not(:first-of-type) {
-        padding-top: 2rem;
+        padding-top: $lineHeight;
     }
 
     .project-description {
         float: left;
         width: $descriptionWidth;
-        position: sticky;
-        top: 2rem;
     }
 
     .project {
-        .specifications, .features {
-            margin-top: $lineHeight;
-        }
-        
         .specifications {
             text-indent: 0;
         
@@ -169,7 +208,7 @@ header {
 
         .about {
             margin-right: $interiorMargin;
-            max-width: 560px;
+            max-width: $descriptionWidth + $menuWidth + $interiorMargin;
         }
     }
 
@@ -197,7 +236,6 @@ footer {
             fill: none;
             stroke-width: 1;
             stroke: black;
-            transition: 300ms;
         }
 
         & {
@@ -210,10 +248,9 @@ footer {
 // ERROR PAGE
 
 .error {
-    padding: 3em;
-    line-height: 1;
+    padding: 1em;
+    line-height: 1.2;
     width: 100%;
-    height: 100vh;
 
     h1 {
         font-size: 6em;
@@ -225,7 +262,6 @@ footer {
 // MEDIA QUERIES
 
 @media screen and (max-width: 1024px) {
-
     .project {
         .project-description {
             float: none;
@@ -238,7 +274,6 @@ footer {
             margin: 0;
         }
     }
-    
 }
 
 @media screen and (max-width: 767px) {
@@ -246,15 +281,15 @@ footer {
     // GENERAL
     
     body {
-        font-size: .925em;
-        line-height: 1.2;
+        font-size: 1em;
+        line-height: 1.3;
         margin: 0;
     }
 
     // SIDEBAR
     
     aside {
-        font-size: 1.25em;
+        font-size: 1.125em;
         width: auto;
         padding: 1.5em 1em 1em;
         border-bottom: 1px solid #000;
@@ -265,14 +300,14 @@ footer {
     }
     
     #menu {
-        line-height: 1.6;
+        line-height: 1.8;
     }
     
     // CONTENT
 	
     main {
         display: block;
-        padding: .75rem 0;
+        padding: 1rem 0;
         border: none;
 
         .content-wrapper {
@@ -287,10 +322,6 @@ footer {
 
         .project {
             padding-top: 2rem;
-
-            img {
-                cursor: default;
-            }
     
             &:not(:last-of-type) {
                 border-bottom: 1px solid #000;
@@ -302,18 +333,27 @@ footer {
     // ABOUT
 
     header {
+        position: static;
         flex-direction: column-reverse;
-        font-size: 1.25em;
+        font-size: 1.125em;
         margin: 0;
         padding: 1em 0 0;
-        background: black;
+        background: #000;
+        
+        p, h1, .language-change {
+            color: #fff;
+        }
 
-        .language-change, .about, .contact {
+        h1 {
+            line-height: 1.4em;
+        }
+
+        .language-change, .about, .contact, h1 {
             padding: 0 1em 1em;
 
-            &, p {
-                color: white;
-            }
+            // &, p {
+            //     color: #fff;
+            // }
 
             a {
                 color: inherit;
@@ -346,5 +386,13 @@ footer {
         left: auto;
         right: 1rem;
         bottom: 1rem;
+    }
+
+    // ERROR PAGE
+
+    .error {
+        h1 {
+            font-size: 2em;
+        }
     }
 }
