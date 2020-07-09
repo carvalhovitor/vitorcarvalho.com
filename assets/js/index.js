@@ -1,86 +1,89 @@
-// SLOW SCROLLING
+"use strict";
 
-$('a[href*="#"]').click(function(event) {
-  // On-page links
-  if (
-    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-    && 
-    location.hostname == this.hostname
-  ) {
-    // Figure out element to scroll to
-    var $linkElem = $(this),
-        target = $(this.hash);
+const site = {
+  init : (callback) => {
 
-    if ($linkElem[0].hash == '#about') $('html, body').animate({scrollTop: 0}, 1000);
+    // SLOW SCROLLING
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        let href = this.getAttribute('href');
+        
+        if (href == '#about') {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
 
-    // target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    // Does a scroll target exist?
-    if (target.length) {
-      // Only prevent default if animation is actually gonna happen
-      event.preventDefault();
+          return;
+        }
 
-      $('html, body').animate({
-        scrollTop: target.offset().top
-      }, 1000, function() {
-        window.location.hash = $linkElem.attr('href')
+        document.querySelector(href).scrollIntoView({
+            behavior: 'smooth'
+        });
+
+        if (history.pushState) {
+          history.pushState(null, null, href);
+        }
+        else {
+          location.hash = href;
+        }
       });
+    });
+
+    // HEADER MARGIN UPDATE
+
+    let main = document.getElementsByTagName('main')[0],
+        header = document.getElementsByTagName('header')[0],
+        headerHeight = 0;
+
+    function setMargin() {
+      if (window.innerWidth < 767) {
+        main.style.marginTop = 0;
+
+        return;
+      }
+
+      let newHeaderHeight = 0;
+      
+      headerHeight = header.clientHeight + parseInt(getComputedStyle(header).marginBottom);
+
+      if (headerHeight != newHeaderHeight) {
+        newHeaderHeight = headerHeight;
+
+        main.style.marginTop = newHeaderHeight + 'px';
+      }
     }
+
+    // GO TO TOP ARROW
+
+    let arrow = document.getElementById('arrow');
+
+    window.onscroll = function() {
+      if (window.pageYOffset > headerHeight) {
+        arrow.style.display = 'block';
+      }
+      else {
+        arrow.style.display = 'none';
+      }
+    }
+
+    setMargin();
+
+    window.onresize = function() {
+      setMargin();
+    };
+
+    callback();
   }
-});
-
-// IMAGE NAVIGATION
-
-$('img').on('click', function() {
-  var next = $(this).parents('div').next('div'),
-      project = $(this).parents('.project'),
-      id = project.attr('id'),
-      nextId = project.next('.project').attr('id');
-
-  if (window.location.hash != id) {
-    history.pushState(null, null, '#' + (next.length === 1 && nextId != undefined ? nextId : id));
-  }
-
-  if (next.length) {
-    $('html, body').animate({
-      scrollTop: next.offset().top - parseInt(next.css('marginBottom'))
-    }, 300);
-  }
-})
-
-
-// HEADER MARGIN UPDATE
-
-var $main = $('main'),
-    $header = $('header');
-
-function setMargin() {
-  var headerHeight = $header.outerHeight(true),
-      newHeaderHeight = 0;
-
-  if (headerHeight != newHeaderHeight) {
-    newHeaderHeight = headerHeight;
-
-    $main.css('margin-top', newHeaderHeight);
-  }
-
 }
-$(window).resize(setMargin);
-
-// ARROW
-
-$arrow = $('a[href="#about"]');
-
-$(window).on('scroll', function() {
-  if ($(window).scrollTop() > $header.outerHeight(true)) {
-    $arrow.fadeIn(200)
-  }
-  else {
-    $arrow.fadeOut(200);
-  }
-})
 
 // DOCUMENT READY
 
-$(function() {
-  $.when(setMargin()).then($('body').css('opacity', 1));
+document.addEventListener('DOMContentLoaded', () => {
+  site.init(function() {
+    document.body.style.opacity = 1;
+  });
 });
