@@ -1,7 +1,8 @@
 <?php snippet('head'); ?>
 
 <section class="error">
-    <h1><?= $site->find('error')->text()->kirbytext() ?></h1>
+    <?= $site->find('error')->text()->kirbytext() ?>
 </section>
 
-<?php snippet('foot'); ?>
+</body>
+</html>
