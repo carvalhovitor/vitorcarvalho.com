@@ -9,6 +9,7 @@
             <p><?= $site->location() ?></p>
             <p><?= $site->phone() ?></p>
             <p><a target="_blank" href="mailto:<?= $site->email() ?>"><?= $site->email() ?></a></p>
+            <p><a target="_blank" href="https://instagram.com/vitorcarvalho">ig/vitorcarvalho</a></p>
           </section>
         </section>
 
@@ -50,7 +51,7 @@
                     <?php foreach($project->images()->sortBy('sort', 'asc') as $image): ?>
                       <div class="image-wrapper">
                         <picture>
-                            <source data-srcset="<?= thumb($image, array('width' => 1280, 'quality' => 100))->url(); ?> 1x, <?= $image->url(); ?> 2x" />
+                            <source data-srcset="<?= thumb($image, array('width' => 300, 'quality' => 100))->url(); ?> 300w, <?= thumb($image, array('width' => 520, 'quality' => 100))->url(); ?> 520w, <?= thumb($image, array('width' => 800, 'quality' => 100))->url(); ?> 800w, <?= thumb($image, array('width' => 1280, 'quality' => 100))->url(); ?> 1280w, <?= $image->url(); ?> 1920w" />
                             <img style="opacity: 0" class="lazyload" alt="<?= $image->alt()->html() ?>">
                         </picture>
                       </div>
@@ -63,9 +64,9 @@
       </div>
       
       <a id="arrow" href="#" id="arrow">
-          <svg preserveAspectRatio="none" width="30" height="60">
+          <svg preserveAspectRatio="none" width="30" height="80">
           <polyline points="5,15 15,0 25,15"/>
-          <line x1="15" y1="0" x2="15" y2="100"/>
+          <line x1="15" y1="0" x2="15" y2="80"/>
           </svg>
       </a>
     </main>

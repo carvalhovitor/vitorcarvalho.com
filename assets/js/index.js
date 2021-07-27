@@ -1,9 +1,10 @@
 "use strict";
 
+const main = document.getElementsByTagName('main')[0],
+      header = document.getElementsByTagName('header')[0];
+
 const site = {
   init : (callback) => {
-    const main = document.getElementsByTagName('main')[0],
-          header = document.getElementsByTagName('header')[0];
 
     let headerHeight = header.clientHeight;
 
@@ -18,7 +19,11 @@ const site = {
         }
       }
       else {
-        main.style.marginTop = header.clientHeight + 'px';
+        if (header.clientHeight != headerHeight || parseInt(getComputedStyle(main).marginTop) == 0) {
+          headerHeight = header.clientHeight;
+          
+          main.style.marginTop = header.clientHeight + 'px';
+        }
 
         header.classList.toggle('hidden', window.pageYOffset > headerHeight);
       }
@@ -34,6 +39,25 @@ const site = {
       }
     }
 
+    // Loop through links add add/remove a header class
+
+    // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    //   anchor.addEventListener('click', function(e) {	
+    //     e.preventDefault();
+
+    //     if (this.id === 'arrow') {
+    //       header.classList.remove('hidden');
+    //     }
+    //     else {
+    //       if (!header.classList.contains('hidden')) {
+    //         header.classList.add('hidden');
+    //       }
+    //     }
+
+    //     window.location.hash = this.getAttribute('href');
+    //   })
+    // })
+
     // Initial states
 
     adjustElements();
@@ -48,7 +72,17 @@ const site = {
 
 window.onload = function() {
   site.init(function() {
-    document.body.classList.add('loaded');
+    // This is tricky. If you do it with CSS, it does this weird thing where
+    // it transitions to opacity 0 (set with CSS) when you reload the page.
+    // Adding this with JS, you make sure this doesn't happen.
+    main.style.transitionDelay = '500ms'; 
+    main.classList.add('transition');
+    header.classList.add('transition');
+    // document.body.style.transition = 'opacity 500ms';
+    
+    setTimeout(function() {
+      document.body.classList.add('loaded');
+    }, 500);
   });
 
   if (window.location.hash) {

@@ -16,7 +16,7 @@
     <title><?= $site->title()->html() ?></title>
     <meta name="description" content="<?= $site->description() ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
-    <?= css('assets/css/index.css'); ?>
+    <?= css('assets/css/index.css?1.1'); ?>
   </head>
   
   <body class="<?= str::slug($page->template()) ?>">

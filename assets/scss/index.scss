@@ -16,16 +16,15 @@ body {
 
 header, main {
     opacity: 0;
-    transition: opacity 1s;
 }
 
-main {
-    transition-delay: 1s;
+.transition {
+    transition: opacity 500ms;
 }
 
-header {
-    transition-delay: 500ms;
-}
+// main {
+    // transition-delay: 500ms;
+// }
 
 .loaded {
     main, header {
@@ -255,17 +254,13 @@ header {
 
 #arrow {
     position: fixed;
-    bottom: 1.5em;
-    left: 2em;
+    bottom: 1em;
+    left: 1.75em;
     
     svg {
         fill: none;
         stroke-width: 1;
         stroke: black;
-    }
-
-    & {
-        width: 100%;
     }
 }
 
@@ -411,7 +406,7 @@ header {
 
     // FOOTER
 
-    footer {
+    #arrow {
         left: auto;
         right: 1em;
         bottom: 1em;
