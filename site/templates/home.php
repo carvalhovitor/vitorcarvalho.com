@@ -25,6 +25,8 @@
           <div>
               <nav id="menu">
                 <ul id="project-list">
+                  <p>PROJETOS</p><br>
+                  
                   <?php $projects = $page->children()->visible(); ?>
 
                   <?php foreach($projects as $project): ?>

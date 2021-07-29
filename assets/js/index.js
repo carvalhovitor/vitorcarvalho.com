@@ -39,6 +39,27 @@ const site = {
       }
     }
 
+    // This is to avoid horizontal scrolling when clicking on hash anchor
+
+    const scrolled = document.querySelector('body'),
+          anchors = document.querySelectorAll("a[href^='#']");
+
+    anchors.forEach(a => {
+      a.onclick = function(e) {
+        e.preventDefault();
+
+        let href = a.getAttribute('href').slice(1),
+            target = document.getElementById(href);
+
+        window.location.hash = href;
+
+        window.scrollTo({
+          left: 0,
+          top: target.offsetTop
+        })
+      };
+    });
+
     // Loop through links add add/remove a header class
 
     // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -89,6 +110,7 @@ window.onload = function() {
     let el = document.querySelectorAll(window.location.hash)[0];
 
     window.scrollTo({
+      left: 0,
       top: el.offsetTop
     })
   }

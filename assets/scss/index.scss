@@ -12,6 +12,7 @@ $interiorMargin: 1.5em;
 body {
     font-family: neue-haas-grotesk-text, "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: $lineHeight;
+    overflow-x: hidden;
 }
 
 header, main {
@@ -81,8 +82,13 @@ aside > div, .project-description {
 }
 
 aside {
-    width: $menuWidth;
-    margin-right: $interiorMargin;
+    width: 60px;
+    border-right: 1px solid #000;
+    transition: .2s;
+
+    &:hover, & > div {
+        width: $menuWidth;
+    }
 
     ul > li {
         margin-left: 1em;
@@ -105,9 +111,13 @@ main {
     display: flex;
     border-top: 1px solid black;
     padding: 0 $margin $margin;
+    width: calc(100vw + 120px);
 
     .content-wrapper {
-        flex: 1;
+        width: calc(100vw - 120px - #{$margin});
+        z-index: 9;
+        background-color: #fff;
+        padding-left: 1.5em;
     }
 
     // Schedule
@@ -219,7 +229,7 @@ img {
 
 // ABOUT 
 
-header, main {
+header {
     width: calc(100% - (#{$margin} * 2));
 }
 
@@ -316,6 +326,10 @@ header {
 
         & > div {
             position: static;
+        }
+
+        &:hover, & div {
+            width: auto;
         }
     }
     

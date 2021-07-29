@@ -1,3 +1,3 @@
-  <?= js(['assets/js/plugins.js', 'assets/js/index.min.js?1.1']); ?>
+  <?= js(['assets/js/plugins.js', 'assets/js/index.min.js']); ?>
 </body>
 </html>
