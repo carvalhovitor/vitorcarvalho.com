@@ -3,6 +3,8 @@
 
 $descriptionWidth: 19em;
 $menuWidth: 10em;
+$retractedMenuWidth: 3em;
+$menuWidthDifference: $menuWidth - $retractedMenuWidth;
 $lineHeight: 22px;
 $margin: 2em;
 $interiorMargin: 1.5em;
@@ -111,10 +113,10 @@ main {
     display: flex;
     border-top: 1px solid black;
     padding: 0 $margin $margin;
-    width: calc(100vw + 120px);
+    width: calc(100vw + #{$menuWidthDifference});
 
     .content-wrapper {
-        width: calc(100vw - 120px - #{$margin});
+        width: calc(100vw - #{$menuWidthDifference} - #{$margin});
         z-index: 9;
         background-color: #fff;
         padding-left: 1.5em;
@@ -170,7 +172,7 @@ h3 {
 }
 
 .images {
-    max-width: 1280px;
+    max-width: 1680px;
     margin-left: $descriptionWidth + $interiorMargin;
 }
 
