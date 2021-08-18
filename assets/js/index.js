@@ -49,13 +49,14 @@ const site = {
         e.preventDefault();
 
         let href = a.getAttribute('href').slice(1),
-            target = document.getElementById(href);
+            target = document.getElementById(href),
+            top = target ? target.offsetTop : 0;
 
         window.location.hash = href;
 
         window.scrollTo({
           left: 0,
-          top: target.offsetTop
+          top: top
         })
       };
     });

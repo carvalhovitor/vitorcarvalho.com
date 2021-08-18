@@ -25,7 +25,7 @@
           <div>
               <nav id="menu">
                 <ul id="project-list">
-                  <p>PROJETOS</p><br>
+                  <p><?= page()->title()->upper() ?></p><br>
                   
                   <?php $projects = $page->children()->visible(); ?>
 
@@ -65,7 +65,7 @@
         </section>
       </div>
       
-      <a id="arrow" href="#" id="arrow">
+      <a id="arrow" href="#">
           <svg preserveAspectRatio="none" width="30" height="80">
           <polyline points="5,15 15,0 25,15"/>
           <line x1="15" y1="0" x2="15" y2="80"/>
