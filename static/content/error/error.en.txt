@@ -1,0 +1,5 @@
+Title: Error
+
+----
+
+Text: 404, page not found

@@ -1,0 +1,1 @@
+Alt: Menu do website mostrando escala, tempo e volume.

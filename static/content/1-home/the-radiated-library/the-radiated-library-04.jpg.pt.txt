@@ -1,0 +1,1 @@
+Alt: O volume é representado pelo espaço vertical que cada texto ocupa na tela.

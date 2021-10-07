@@ -1,0 +1,1 @@
+Alt: Fachada da loja mostrando uma seleção de produtos ordenada de A a Z.

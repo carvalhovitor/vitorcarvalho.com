@@ -1,0 +1,5 @@
+Title: Leo Santana
+
+----
+
+Text: Design e desenvolvimento de website responsivo para o artista Leo Santana, projetado para organizer seu grande corpo de trabalho, iniciado em 1987. Uma abordagem tipográfica refinada concede uma interpretação literária às obras, que são em sua maioria comissionadas. Cada uma das páginas principais foi projetada de modo a sugerir a natureza de seu conteúdo: estaticidade, escala, permanência, efemeridade etc. O site foi atualizado em 2017 para incluir uma loja que almeja vender obras de pequena e média escala a potenciais colecionadores.

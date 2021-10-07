@@ -1,0 +1,88 @@
+Title: Editora Terra
+
+----
+
+Year: 2020
+
+----
+
+Janeiro: 
+
+----
+
+Fevereiro: 
+
+----
+
+Marco: 
+
+----
+
+Abril: 
+
+----
+
+Maio: 
+
+----
+
+Junho: 
+
+----
+
+Julho: 
+
+----
+
+Agosto: 
+
+----
+
+Setembro: 
+
+----
+
+Outubro: 
+
+- 
+  from: "1"
+  to: "6"
+  description: Análise de conteúdo
+- 
+  from: "7"
+  to: "14"
+  description: Primeiros esboços
+- 
+  from: "15"
+  to: "29"
+  description: Estudos gráficos
+- 
+  from: "30"
+  to: ""
+  description: Apresentação do projeto
+
+----
+
+Novembro: 
+
+- 
+  from: "1"
+  to: "8"
+  description: Implementação de revisões
+- 
+  from: "9"
+  to: "20"
+  description: Desenvolvimento de manual da marca
+- 
+  from: "21"
+  to: "30"
+  description: Finalização de arquivos template
+
+----
+
+Dezembro: 
+
+- 
+  from: "1"
+  to: "11"
+  description: Ajustes finais

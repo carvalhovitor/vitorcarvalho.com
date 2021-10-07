@@ -1,0 +1,1 @@
+Alt: A straightforward timeline representation for the time mode.

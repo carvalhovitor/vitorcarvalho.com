@@ -1,0 +1,117 @@
+Title: Contracidades
+
+----
+
+Year: 2021
+
+----
+
+Janeiro: 
+
+----
+
+Fevereiro: 
+
+----
+
+Marco: 
+
+----
+
+Abril: 
+
+----
+
+Maio: 
+
+- 
+  from: "19"
+  to: "27"
+  description: Análise de conteúdo
+- 
+  from: "25"
+  to: "31"
+  description: Estudos gráficos
+
+----
+
+Junho: 
+
+- 
+  from: "1"
+  to: "30"
+  description: Estudos gráficos
+- 
+  from: "23"
+  to: ""
+  description: Reunião 1
+
+----
+
+Julho: 
+
+- 
+  from: "1"
+  to: "19"
+  description: Estudos gráficos
+- 
+  from: "8"
+  to: "19"
+  description: Pré-produção
+- 
+  from: "8"
+  to: "31"
+  description: Revisão e ajustes
+
+----
+
+Agosto: 
+
+- 
+  from: "1"
+  to: "10"
+  description: Revisão e ajustes
+- 
+  from: "11"
+  to: "20"
+  description: >
+    Preparação de arquivos para
+    diagramação
+- 
+  from: "21"
+  to: "31"
+  description: Diagramação
+
+----
+
+Setembro: 
+
+- 
+  from: "1"
+  to: "20"
+  description: Diagramação
+- 
+  from: "15"
+  to: "30"
+  description: >
+    Solicitação de orçamentos /
+    produção gráfica
+
+----
+
+Outubro: 
+
+- 
+  from: "1"
+  to: "10"
+  description: >
+    Finalização de arquivos da capa e
+    miolo
+
+----
+
+Novembro: 
+
+----
+
+Dezembro: 
