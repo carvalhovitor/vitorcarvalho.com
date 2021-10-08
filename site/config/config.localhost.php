@@ -7,6 +7,7 @@ c::set('cache', false);
 c::set('staticbuilder.assets', [
     'assets',
     'content',
+    'thumbs',
     'assets/netlify.toml' => 'netlify.toml',
 ]);
 
