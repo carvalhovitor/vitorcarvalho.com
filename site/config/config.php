@@ -46,5 +46,6 @@ c::set('languages', array(
   ));
 
   c::set('panel.stylesheet', 'assets/css/panel.css');
-  c::set('krb_html_min', true);
+  // c::set('krb_html_min', true);
+  // c::set('error', '404');
   // c::set('debug', true);

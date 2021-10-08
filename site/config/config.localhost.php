@@ -3,3 +3,7 @@
 c::set('staticbuilder', true);
 // StaticBuilder requires Kirby’s cache to be disabled
 c::set('cache', false);
+
+c::set([
+    'staticbuilder.assets' => ['assets', 'content']
+]);
