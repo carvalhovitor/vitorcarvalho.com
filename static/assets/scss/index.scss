@@ -1,13 +1,13 @@
 @import 'reset';
 @import url("https://use.typekit.net/iwz1cdz.css");
 
-$descriptionWidth: 19em;
-$menuWidth: 11em;
+$descriptionWidth: 23em;
+$menuWidth: 12em;
 $retractedMenuWidth: 3em;
 $menuWidthDifference: $menuWidth - $retractedMenuWidth;
 $lineHeight: 22px;
 $margin: 2em;
-$interiorMargin: 1.5em;
+$interiorMargin: 2em;
 
 // GENERAL
 
@@ -112,7 +112,7 @@ main {
     background: #fff;
     display: flex;
     border-top: 1px solid black;
-    padding: 0 $margin $margin;
+    padding: 0 $margin 0;
     width: calc(100vw + #{$menuWidthDifference});
 
     .content-wrapper {
@@ -210,6 +210,10 @@ img {
     }
 
     .project {
+        &:not(:last-child) {
+            border-bottom: 1px solid black;
+        }
+
         .specifications {
             text-indent: 0;
         
