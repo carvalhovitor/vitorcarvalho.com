@@ -6,39 +6,6 @@ const main = document.getElementsByTagName('main')[0],
 const site = {
   init : (callback) => {
 
-    let headerHeight = header.clientHeight;
-
-    function adjustElements() {
-      if (window.innerWidth <= 767) {
-        if (parseInt(main.style.marginTop) > 0) {
-          main.style.marginTop = 0;
-        }
-
-        if (header.classList.contains('hidden')) {
-          header.classList.remove('hidden');
-        }
-      }
-      else {
-        if (header.clientHeight != headerHeight || parseInt(getComputedStyle(main).marginTop) == 0) {
-          headerHeight = header.clientHeight;
-          
-          main.style.marginTop = header.clientHeight + 'px';
-        }
-
-        header.classList.toggle('hidden', window.pageYOffset > headerHeight);
-      }
-    }
-
-    window.onresize = function() {
-      adjustElements();
-    };
-
-    window.onscroll = function() {
-      if (window.innerWidth > 767) {
-        header.classList.toggle('hidden', window.pageYOffset > headerHeight);
-      }
-    }
-
     // This is to avoid horizontal scrolling when clicking on hash anchor
 
     const scrolled = document.querySelector('body'),
@@ -50,7 +17,8 @@ const site = {
 
         let href = a.getAttribute('href').slice(1),
             target = document.getElementById(href),
-            top = target ? target.offsetTop : 0;
+            headerHeight = header.offsetHeight,
+            top = target ? target.offsetTop + headerHeight : 0;
 
         window.location.hash = href;
 
@@ -82,7 +50,7 @@ const site = {
 
     // Initial states
 
-    adjustElements();
+    // adjustElements();
 
     // Callback
 
@@ -105,14 +73,14 @@ window.onload = function() {
     setTimeout(function() {
       document.body.classList.add('loaded');
     }, 500);
-  });
+  })
 
-  if (window.location.hash) {
-    let el = document.querySelectorAll(window.location.hash)[0];
+  // if (window.location.hash) {
+  //   let el = document.querySelectorAll(window.location.hash)[0];
 
-    window.scrollTo({
-      left: 0,
-      top: el.offsetTop
-    })
-  }
+  //   window.scrollTo({
+  //     left: 0,
+  //     top: el.offsetTop
+  //   })
+  // }
 };

@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AACI,mBAAG;EACC,OAAO,EAAE,IAAI;EACb,IAAI,EAAE,CAAC;EAEP,4EAAqC;IACjC,SAAS,EAAE,CAAC;EAGhB,0JAA2E;IACvE,KAAK,EAAE,OAAO;EAGlB,wEAAiC;IAC7B,KAAK,EAAE,IAAI",
-"sources": ["../scss/panel.scss"],
-"names": [],
-"file": "panel.css"
-}
+{"version":3,"sourceRoot":"","sources":["../scss/panel.scss"],"names":[],"mappings":"AACI;EACI;EACA;;AAEA;EACI;;AAGJ;EACI;;AAGJ;EACI","file":"panel.css"}

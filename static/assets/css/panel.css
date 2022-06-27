@@ -1,11 +1,15 @@
 .field-grid-item tr {
   display: flex;
-  flex: 1; }
-  .field-grid-item tr th:nth-of-type(3), .field-grid-item tr td:nth-of-type(3) {
-    flex-grow: 1; }
-  .field-grid-item tr th:nth-of-type(1), .field-grid-item tr th:nth-of-type(2), .field-grid-item tr td:nth-of-type(1), .field-grid-item tr td:nth-of-type(2) {
-    width: 3.25rem; }
-  .field-grid-item tr th:last-of-type, .field-grid-item tr td:last-of-type {
-    width: 2rem; }
+  flex: 1;
+}
+.field-grid-item tr th:nth-of-type(3), .field-grid-item tr td:nth-of-type(3) {
+  flex-grow: 1;
+}
+.field-grid-item tr th:nth-of-type(1), .field-grid-item tr th:nth-of-type(2), .field-grid-item tr td:nth-of-type(1), .field-grid-item tr td:nth-of-type(2) {
+  width: 3.25rem;
+}
+.field-grid-item tr th:last-of-type, .field-grid-item tr td:last-of-type {
+  width: 2rem;
+}
 
 /*# sourceMappingURL=panel.css.map */

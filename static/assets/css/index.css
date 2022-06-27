@@ -98,6 +98,7 @@ aside, .projects > div {
 
 main {
   background: #fff;
+  position: relative;
   display: flex;
   border-top: 1px solid black;
   padding: 0 2em 0;
@@ -202,12 +203,11 @@ img.lazyloaded {
 
 header {
   width: calc(100% - (2em * 2));
+  position: sticky;
+  top: 0;
 }
 
 header {
-  position: fixed;
-  top: 0;
-  z-index: -1;
   padding: 1.5em 2em 1.75em;
   display: flex;
   justify-content: space-between;
