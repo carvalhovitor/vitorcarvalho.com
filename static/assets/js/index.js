@@ -18,7 +18,7 @@ const site = {
         let href = a.getAttribute('href').slice(1),
             target = document.getElementById(href),
             headerHeight = header.offsetHeight,
-            top = target ? target.offsetTop + headerHeight : 0;
+            top = target ? target.offsetTop + headerHeight + 1 : 0;
 
         window.location.hash = href;
 
