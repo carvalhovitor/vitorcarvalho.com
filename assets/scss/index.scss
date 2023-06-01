@@ -5,7 +5,7 @@ $descriptionWidth: 23em;
 $menuWidth: 12em;
 $retractedMenuWidth: 3em;
 $menuWidthDifference: $menuWidth - $retractedMenuWidth;
-$lineHeight: 22px;
+$lineHeight: 23px;
 $margin: 2em;
 $interiorMargin: 2em;
 
@@ -103,7 +103,11 @@ aside {
 }
 
 aside, .projects > div {
-    padding-top: 2em;
+    padding-top: 1.5em;
+}
+
+.projects > div {
+    margin-bottom: 1px; // Gambiarra
 }
 
 // CONTENT 
