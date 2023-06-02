@@ -59,7 +59,8 @@ i {
 }
 
 ::selection {
-  background-color: rgba(255, 255, 160, 0.99);
+  color: white;
+  background-color: black;
 }
 
 img {
@@ -209,9 +210,6 @@ header {
   width: calc(100% - (2em * 2));
   position: sticky;
   top: 0;
-}
-
-header {
   padding: 1.5em 2em 1.75em;
   display: flex;
   justify-content: space-between;
