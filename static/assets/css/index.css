@@ -15,8 +15,12 @@
 
 body {
   font-family: neue-haas-grotesk-text, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 23px;
+  line-height: 1.4em;
   overflow-x: hidden;
+}
+
+p, h3, a, i, em {
+  font-size: 1.1rem;
 }
 
 header, main {
@@ -50,8 +54,16 @@ li a:hover {
   letter-spacing: -0.3em;
 }
 
+article {
+  display: flex;
+}
+article .project-description-wrapper {
+  padding-top: 1.5em;
+  width: 4.5em;
+}
+
 article p + p {
-  margin-top: 23px;
+  margin-top: 1.4em;
 }
 
 i {
@@ -77,12 +89,12 @@ aside > div, .project-description {
 }
 
 aside {
-  width: 60px;
+  width: 4em;
   border-right: 1px solid #000;
   transition: 0.2s;
 }
 aside:hover, aside > div {
-  width: 12em;
+  width: 14em;
 }
 aside ul > li {
   margin-left: 1em;
@@ -90,15 +102,11 @@ aside ul > li {
 }
 
 .visit {
-  margin-top: 23px;
+  margin-top: 1.4em;
 }
 
-aside, .projects > div {
+aside {
   padding-top: 1.5em;
-}
-
-.projects > div {
-  margin-bottom: 1px;
 }
 
 main {
@@ -107,13 +115,11 @@ main {
   display: flex;
   border-top: 1px solid black;
   padding: 0 2em 0;
-  width: calc(100vw + 9em);
 }
 main .content-wrapper {
-  width: calc(100vw - 9em - 2em);
-  z-index: 9;
+  width: calc(100% - 4em);
+  z-index: 2;
   background-color: #fff;
-  padding-left: 1.5em;
 }
 main.schedule {
   padding-top: 1em;
@@ -152,19 +158,25 @@ main.schedule section li {
 }
 
 h3 {
-  margin-bottom: 23px;
+  margin-bottom: 1.4em;
+  text-transform: uppercase;
 }
 
 .images {
-  max-width: 1680px;
-  margin-left: 25em;
+  border-left: 1px solid black;
+  z-index: 3;
+  background: white;
+  padding-left: 1.5em;
+  padding-top: 1.5em;
 }
 
 .image-wrapper {
   position: relative;
   padding-top: 75%;
   overflow: hidden;
-  margin-bottom: 2%;
+  margin-bottom: 1.5em;
+  width: calc(100vw - 15em);
+  max-width: 1440px;
 }
 
 img {
@@ -187,20 +199,24 @@ img.lazyloaded {
 }
 
 .projects .project-description {
-  float: left;
-  width: 23em;
+  width: 25em;
+  padding-right: 1.5em;
+  padding-bottom: 1.5em;
 }
-.projects .project:not(:last-child) {
-  border-bottom: 1px solid black;
+.projects .project-description-wrapper {
+  transition: 0.2s;
 }
-.projects .project .specifications {
-  text-indent: 0;
+.projects .project-description-wrapper:hover {
+  width: 27em;
 }
-.projects .project .specifications:last-child {
-  margin-bottom: 0;
+.projects .project:has(.project-description-wrapper:hover) ~ .project .project-description-wrapper {
+  width: 27em;
 }
-.projects .project .features, .projects .project .visit {
-  text-indent: 0;
+.projects .project:has(+ .project .project-description-wrapper:hover) .project-description-wrapper {
+  width: 27em;
+}
+.projects .project {
+  padding-left: 1.5em;
 }
 .projects .project:last-of-type .image-wrapper:last-of-type {
   margin-bottom: 0;
@@ -219,7 +235,7 @@ header .about-wrapper {
 }
 header .about-wrapper .about {
   margin-right: 2em;
-  max-width: 37em;
+  max-width: 36em;
 }
 header .language-change {
   padding-left: 1.75em;
@@ -250,14 +266,21 @@ header .language-change a {
 }
 
 @media screen and (max-width: 1024px) {
-  .project .project-description {
-    float: none;
+  .projects .project article {
+    display: block;
+  }
+  .projects .project .project-description-wrapper {
+    width: 100%;
+  }
+  .projects .project .project-description {
     width: auto;
     margin-bottom: 1.25em;
     position: static;
   }
-  .project .images {
+  .projects .project .images {
     margin: 0;
+    border: none;
+    padding-left: 0;
   }
 }
 @media screen and (max-width: 767px) {
@@ -303,11 +326,15 @@ header .language-change a {
   main aside {
     padding-top: 0;
     margin-right: 0;
+    border-right: none;
   }
-  main .project {
-    padding-top: 2em;
+  main .projects .project {
+    padding: 0;
   }
-  main .project:not(:last-of-type) {
+  main .projects .project .image-wrapper {
+    width: 100%;
+  }
+  main .projects .project:not(:last-of-type) {
     border-bottom: 1px solid #000;
     padding-bottom: 2em;
   }

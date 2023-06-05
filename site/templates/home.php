@@ -44,10 +44,12 @@
           <?php foreach($projects as $project): ?>
             <div class="project" id="<?= str::slug($project->title()); ?>">
               <article>
-                  <div class="project-description">
-                      <h3 class="title"><?= $project->title(); ?></h3>
-                      <?= $project->text()->kirbytext() ?>
-                  </div>
+                  <div class="project-description-wrapper">
+                    <div class="project-description">
+                        <h3 class="title"><?= $project->title(); ?></h3>
+                        <?= $project->text()->kirbytext() ?>
+                    </div>
+                </div>
                   
                   <div class="images">
                     <?php foreach($project->images()->sortBy('sort', 'asc') as $image): ?>
