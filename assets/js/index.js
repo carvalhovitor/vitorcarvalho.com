@@ -29,29 +29,6 @@ const site = {
       };
     });
 
-    // Loop through links add add/remove a header class
-
-    // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    //   anchor.addEventListener('click', function(e) {	
-    //     e.preventDefault();
-
-    //     if (this.id === 'arrow') {
-    //       header.classList.remove('hidden');
-    //     }
-    //     else {
-    //       if (!header.classList.contains('hidden')) {
-    //         header.classList.add('hidden');
-    //       }
-    //     }
-
-    //     window.location.hash = this.getAttribute('href');
-    //   })
-    // })
-
-    // Initial states
-
-    // adjustElements();
-
     // Callback
 
     callback();
@@ -68,19 +45,9 @@ window.onload = function() {
     main.style.transitionDelay = '500ms'; 
     main.classList.add('transition');
     header.classList.add('transition');
-    // document.body.style.transition = 'opacity 500ms';
     
     setTimeout(function() {
       document.body.classList.add('loaded');
     }, 500);
   })
-
-  // if (window.location.hash) {
-  //   let el = document.querySelectorAll(window.location.hash)[0];
-
-  //   window.scrollTo({
-  //     left: 0,
-  //     top: el.offsetTop
-  //   })
-  // }
 };
