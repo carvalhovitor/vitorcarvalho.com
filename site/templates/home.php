@@ -7,7 +7,7 @@
 
           <section class="contact">
             <p><?= $site->location() ?></p>
-            <p><?= $site->phone() ?></p>
+            <p><a href="tel:<?= $site->phone() ?>"><?= $site->phone() ?></a></p>
             <p><a target="_blank" href="mailto:<?= $site->email() ?>"><?= $site->email() ?></a></p>
             <p><a target="_blank" href="https://instagram.com/vitorcarvalho">ig/vitorcarvalho</a></p>
           </section>

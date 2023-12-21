@@ -23,6 +23,13 @@ p, h3, a, i, em {
   font-size: 1.1rem;
 }
 
+a[href^=tel] {
+  color: inherit; /* Inherit text color of parent element. */
+  text-decoration: none; /* Remove underline. */
+  border: none;
+  pointer-events: none;
+}
+
 header, main {
   opacity: 0;
 }
