@@ -265,7 +265,7 @@ header .language-change a {
 
 @media screen and (max-width: 1024px) {
   .projects .project:has(.project-description-wrapper:hover) ~ .project .project-description-wrapper,
-.projects .project:has(+ .project .project-description-wrapper:hover) .project-description-wrapper {
+  .projects .project:has(+ .project .project-description-wrapper:hover) .project-description-wrapper {
     width: auto;
   }
   .projects .project article {
@@ -294,11 +294,9 @@ header .language-change a {
     line-height: 1.3;
     margin: 0;
   }
-
   p, h3, a, i, em {
     font-size: 1rem;
   }
-
   aside {
     font-size: 1.125em;
     width: auto;
@@ -311,17 +309,14 @@ header .language-change a {
   aside:hover, aside div {
     width: auto;
   }
-
   #menu {
     line-height: 1.8;
   }
-
   header, main {
     width: 100%;
     padding: 0;
     margin: 0;
   }
-
   main {
     display: block;
     padding: 1em 0;
@@ -347,7 +342,6 @@ header .language-change a {
     border-bottom: 1px solid #000;
     padding-bottom: 2em;
   }
-
   header {
     position: static;
     flex-direction: column-reverse;
@@ -356,7 +350,7 @@ header .language-change a {
     background: #000;
   }
   header p, header h1, header .language-change {
-    color: #fff;
+    color: #fff !important;
   }
   header h1 {
     line-height: 1.4em;
@@ -381,13 +375,11 @@ header .language-change a {
     max-width: 100%;
     margin: 1em 0 0;
   }
-
   #arrow {
     left: auto;
     right: 1em;
     bottom: 1em;
   }
-
   .error h1 {
     font-size: 2em;
   }
