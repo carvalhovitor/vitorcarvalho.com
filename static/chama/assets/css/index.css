@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 * {
   margin: 0;
@@ -73,6 +74,10 @@ main > section {
 .dashboard aside .data {
   line-height: 2;
 }
+.dashboard aside .selected::before {
+  content: "• ";
+  color: #aabaa8;
+}
 .dashboard main {
   background-color: white;
   margin: 1rem;
@@ -137,6 +142,7 @@ input[type=checkbox] {
   font-family: "Inter", "Helvetica", "Arial", sans-serif;
   font-size: 1rem;
   background-color: #aabaa8;
+  cursor: pointer;
 }
 
 ::placeholder {
