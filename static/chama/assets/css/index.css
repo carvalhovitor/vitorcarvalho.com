@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  color: black;
+  font-weight: normal;
+  text-decoration: none;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -o-text-size-adjust: 100%;
+  transition: 0.2s;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 22px;
+  line-height: 140%;
+}
+
+body {
+  background-color: #f5f5f2;
+  font-family: "Inter", "Helvetica", "Arial", sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.data-chat main {
+  align-items: normal;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+main > section {
+  background-color: white;
+  width: 100%;
+  max-width: 640px;
+  overflow: hidden;
+  margin: 1rem;
+}
+
+.log .logo {
+  position: fixed;
+  left: 0;
+  top: 0;
+  max-width: 280px;
+  margin: 2rem;
+}
+
+.dashboard .wrapper {
+  display: flex;
+}
+.dashboard aside {
+  margin: 2rem;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.dashboard aside header {
+  padding-bottom: 1rem;
+}
+.dashboard aside header img {
+  width: 100%;
+}
+.dashboard aside .data {
+  line-height: 2;
+}
+.dashboard main {
+  background-color: white;
+  margin: 1rem;
+  border-radius: 1em;
+  height: calc(100vh - 2rem);
+  flex: 1;
+}
+
+.login {
+  border-radius: 1em;
+}
+.login h2 {
+  background-color: #f4716a;
+  padding: 1.5rem 2.5rem;
+}
+
+h2 {
+  padding: 1.5rem 0;
+}
+
+h2, h3, h4, .logged {
+  font-weight: bold;
+}
+
+input, label, a {
+  display: block;
+  width: 100%;
+}
+
+input[type=text] {
+  padding: 1em 0;
+  border-bottom: 1px solid lightgray;
+  font-size: 1rem;
+}
+input[type=text]:focus {
+  outline: none;
+}
+input[type=text].message {
+  border: 1px solid lightgray;
+  border-radius: 12px;
+  padding: 1rem;
+  height: 2.75rem;
+}
+
+input[type=checkbox] {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.chat-submit {
+  position: relative;
+}
+.chat-submit input[type=submit] {
+  position: absolute;
+  right: 0.375rem;
+  top: 0.375rem;
+  bottom: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+  font-family: "Inter", "Helvetica", "Arial", sans-serif;
+  font-size: 1rem;
+  background-color: #aabaa8;
+}
+
+::placeholder {
+  color: lightgray;
+}
+
+.forgot-password {
+  padding-top: 1rem;
+  text-align: right;
+}
+
+.inputs {
+  padding: 1.5rem 2.5rem;
+}
+.inputs > div {
+  padding: 1em 0;
+}
+.inputs label {
+  font-weight: bold;
+}
+
+button {
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  background-color: #aabaa8;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #f5f5f2;
+}
+
+.login-action {
+  display: flex;
+  padding: 1.5rem 2.5rem;
+  justify-content: space-between;
+}
+.login-action button {
+  border-radius: 2rem;
+}
+.login-action > div {
+  display: flex;
+  align-items: center;
+}
+
+.upload-area {
+  height: 60vh;
+  border: 1px dashed gray;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.upload-area svg {
+  max-width: 150px;
+  stroke-width: 2px;
+  stroke: #aabaa8;
+  fill: none;
+  margin-bottom: 1rem;
+}
+.upload-area button {
+  margin-top: 1rem;
+}
+
+.account svg {
+  width: 32px;
+  fill: none;
+  stroke: black;
+  stroke-width: 2px;
+}
+.account .sign-out {
+  color: red;
+}
+
+.chat-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.chat-log > div {
+  padding-bottom: 1rem;
+}
+.chat-log ul li {
+  display: flex;
+  margin: 0.75rem 0;
+}
+.chat-log .color {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  border-radius: 3rem;
+  margin-right: 0.5rem;
+}
+.chat-log .color.sky {
+  background-color: #3c89fd;
+}
+.chat-log .color.forest {
+  background-color: #08542a;
+}
+.chat-log .color.peach {
+  background-color: #ffbd91;
+}
+
+.chat-submit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.speaker {
+  margin: 1rem 0;
+}
+.speaker.you span {
+  background-color: #aabaa8;
+}
+.speaker.chama span {
+  background-color: #f4716a;
+}
+.speaker span {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 2rem;
+}
+
+/*# sourceMappingURL=index.css.map */
