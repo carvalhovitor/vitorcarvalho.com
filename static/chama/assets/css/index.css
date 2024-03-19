@@ -11,7 +11,6 @@
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -o-text-size-adjust: 100%;
-  transition: 0.2s;
   box-sizing: border-box;
 }
 
@@ -25,12 +24,70 @@ body {
   font-family: "Inter", "Helvetica", "Arial", sans-serif;
 }
 
+h1 {
+  display: none;
+  position: fixed;
+  width: 100%;
+  padding: 1rem;
+  font-weight: bold;
+  background: #f6d9d3;
+  text-align: right;
+  font-size: 1.25rem;
+}
+
 .wrapper {
   width: 100%;
 }
 
 .data-chat main {
   align-items: normal;
+}
+
+#menu-toggle, label[for=menu-toggle] {
+  display: none;
+}
+
+#menu {
+  display: flex;
+  z-index: 4;
+}
+#menu label span {
+  display: block;
+  width: 32px;
+  height: 3px;
+  margin: 0 0 7px;
+  background: black;
+}
+#menu label span:first-child {
+  transform-origin: 0% 0%;
+}
+#menu label span:last-child {
+  transform-origin: 0% 100%;
+}
+#menu input[type=checkbox], #menu label {
+  position: fixed;
+  left: 18px;
+  top: 18px;
+  width: 32px;
+  height: 32px;
+  z-index: 5;
+}
+#menu input[type=checkbox] {
+  cursor: pointer;
+  opacity: 0;
+}
+#menu input[type=checkbox]:checked ~ aside {
+  display: flex !important;
+}
+#menu input[type=checkbox]:checked ~ label span {
+  transform: rotate(45deg) translate(-2px, -1px);
+}
+#menu input[type=checkbox]:checked ~ label span:nth-last-child(2) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menu input[type=checkbox]:checked ~ label span:last-child {
+  transform: rotate(-45deg) translate(0, -1px);
 }
 
 main {
@@ -40,18 +97,20 @@ main {
   height: 100vh;
 }
 main > section {
-  background-color: white;
   width: 100%;
-  max-width: 640px;
+  max-width: 600px;
   overflow: hidden;
   margin: 1rem;
+}
+main .login {
+  background-color: white;
 }
 
 .log .logo {
   position: fixed;
   left: 0;
   top: 0;
-  max-width: 280px;
+  max-width: 12rem;
   margin: 2rem;
 }
 
@@ -60,7 +119,7 @@ main > section {
 }
 .dashboard aside {
   margin: 2rem;
-  max-width: 280px;
+  max-width: 12rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -96,7 +155,7 @@ main > section {
 }
 
 h2 {
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 }
 
 h2, h3, h4, .logged {
@@ -193,13 +252,14 @@ button:hover {
 }
 
 .upload-area {
-  height: 60vh;
+  min-height: 60vh;
   border: 1px dashed gray;
   border-radius: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 1rem;
 }
 .upload-area svg {
   max-width: 150px;
@@ -266,7 +326,7 @@ button:hover {
 }
 
 .speaker {
-  margin: 2rem 0 1rem;
+  margin: 1rem 0;
 }
 .speaker.you span {
   background-color: #aabaa8;
@@ -278,6 +338,63 @@ button:hover {
 .speaker span {
   padding: 0.5rem 1rem;
   border-radius: 2rem;
+}
+
+@media screen and (max-width: 940px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 720px) {
+  h1 {
+    display: block;
+  }
+  #menu-toggle, label[for=menu-toggle] {
+    display: block;
+  }
+  .upload main {
+    align-items: start;
+  }
+  .upload main > section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 1rem;
+  }
+  .upload main > section .upload-area {
+    flex: 1;
+  }
+  .dashboard main {
+    margin-top: 4.75rem;
+    height: calc(100vh - 6.25rem);
+  }
+  .dashboard aside {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: white;
+    z-index: 1;
+    max-width: 100%;
+    margin: 0;
+    padding: 3rem 1em 1em;
+    height: 100vh;
+  }
+  .dashboard aside header {
+    display: none;
+  }
+  .dashboard aside .data {
+    line-height: 2.25;
+  }
+  h2 {
+    padding: 0 0 0.5rem;
+  }
+  .speaker {
+    margin: 1rem 0 0.75rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
