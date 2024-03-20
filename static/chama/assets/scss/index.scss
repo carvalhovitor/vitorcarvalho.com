@@ -21,7 +21,7 @@ $chamaSecondary: #f6d9d3;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 html {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 150%;
 }
 
@@ -123,12 +123,13 @@ main {
 
     & > section {
         width: 100%;
-        max-width: 600px;
+        max-width: 34rem;
         overflow: hidden;
         margin: 1rem;
     }
 
     .login {
+        max-width: 28rem;
         background-color: white;
     }
 }
@@ -404,11 +405,11 @@ button {
 }
 
 
-@media screen and (max-width: 940px) {
-    html {
-        font-size: 18px;
-    } 
-}
+// @media screen and (max-width: 940px) {
+//     html {
+//         font-size: 18px;
+//     } 
+// }
 
 @media screen and (max-width: 720px) {
     h1 {

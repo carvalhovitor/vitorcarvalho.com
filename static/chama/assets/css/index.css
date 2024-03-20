@@ -15,7 +15,7 @@
 }
 
 html {
-  font-size: 22px;
+  font-size: 18px;
   line-height: 150%;
 }
 
@@ -98,11 +98,12 @@ main {
 }
 main > section {
   width: 100%;
-  max-width: 600px;
+  max-width: 34rem;
   overflow: hidden;
   margin: 1rem;
 }
 main .login {
+  max-width: 28rem;
   background-color: white;
 }
 
@@ -340,11 +341,6 @@ button:hover {
   border-radius: 2rem;
 }
 
-@media screen and (max-width: 940px) {
-  html {
-    font-size: 18px;
-  }
-}
 @media screen and (max-width: 720px) {
   h1 {
     display: block;
