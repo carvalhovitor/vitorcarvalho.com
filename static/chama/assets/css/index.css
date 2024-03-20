@@ -107,12 +107,24 @@ main .login {
   background-color: white;
 }
 
+.log {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.log .wrapper {
+  flex: 1;
+}
+.log main {
+  height: 100%;
+}
+.log header {
+  text-align: center;
+}
 .log .logo {
-  position: fixed;
-  left: 0;
-  top: 0;
-  max-width: 12rem;
-  margin: 2rem;
+  max-width: 26rem;
+  padding: 2rem;
+  text-align: center;
 }
 
 .dashboard .wrapper {
@@ -360,6 +372,20 @@ button:hover {
   }
   #menu-toggle, label[for=menu-toggle] {
     display: block;
+  }
+  .log .logo {
+    padding: 1rem 1rem 0;
+    width: 100%;
+  }
+  .log .inputs, .log .login-action {
+    padding: 0 1.25rem 1.25rem;
+  }
+  .log .login-action {
+    display: block;
+  }
+  .log .login-action .login-button {
+    margin-top: 1rem;
+    width: 100%;
   }
   .dashboard main {
     margin-top: 4.75rem;

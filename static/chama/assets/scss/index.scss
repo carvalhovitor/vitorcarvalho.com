@@ -135,12 +135,26 @@ main {
 }
 
 .log {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    .wrapper {
+        flex: 1;
+    }
+
+    main {
+        height: 100%;
+    }
+
+    header {
+        text-align: center;
+    }
+
     .logo {
-        position: fixed;
-        left: 0;
-        top: 0;
-        max-width: 12rem;
-        margin: 2rem;
+        max-width: 26rem;
+        padding: 2rem;
+        text-align: center;
     }
 }
 
@@ -434,6 +448,26 @@ button {
 
     #menu-toggle, label[for="menu-toggle"] {
         display: block;
+    }
+
+    .log {
+        .logo {
+            padding: 1rem 1rem 0;
+            width: 100%;
+        }
+
+        .inputs, .login-action {
+            padding: 0 1.25rem 1.25rem;
+        }
+
+        .login-action {
+            display: block;
+
+            .login-button {
+                margin-top: 1rem;
+                width: 100%;
+            }
+        }
     }
    
     .dashboard {
