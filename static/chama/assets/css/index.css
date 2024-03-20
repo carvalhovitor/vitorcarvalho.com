@@ -252,15 +252,28 @@ button:hover {
   align-items: center;
 }
 
+.upload main {
+  align-items: start;
+}
+.upload main > section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 1rem;
+  justify-content: center;
+}
+
 .upload-area {
-  min-height: 60vh;
   border: 1px dashed gray;
   border-radius: 1em;
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 1rem;
+  max-height: 800px;
 }
 .upload-area svg {
   max-width: 150px;
@@ -347,19 +360,6 @@ button:hover {
   }
   #menu-toggle, label[for=menu-toggle] {
     display: block;
-  }
-  .upload main {
-    align-items: start;
-  }
-  .upload main > section {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 1rem;
-  }
-  .upload main > section .upload-area {
-    flex: 1;
   }
   .dashboard main {
     margin-top: 4.75rem;
