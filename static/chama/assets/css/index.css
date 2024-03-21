@@ -117,13 +117,14 @@ main .login {
 }
 .log main {
   height: 100%;
+  flex-direction: column;
 }
 .log header {
   text-align: center;
 }
 .log .logo {
-  max-width: 26rem;
-  padding: 2rem;
+  max-width: 24rem;
+  padding: 1rem;
   text-align: center;
 }
 
