@@ -146,6 +146,7 @@ main {
     main {
         height: 100%;
         flex-direction: column;
+        padding: 1rem;
     }
 
     header {
@@ -157,6 +158,8 @@ main {
         padding: 1rem;
         text-align: center;
     }
+
+
 }
 
 .dashboard {

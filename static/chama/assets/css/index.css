@@ -118,6 +118,7 @@ main .login {
 .log main {
   height: 100%;
   flex-direction: column;
+  padding: 1rem;
 }
 .log header {
   text-align: center;
